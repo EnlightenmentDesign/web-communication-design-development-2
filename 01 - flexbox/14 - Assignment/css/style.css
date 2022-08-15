@@ -1,0 +1,159 @@
+/*
+    Created by: Student Name - Student ID
+    Created on: Today's Date
+    Updated on: Today's Date
+    Project: Flexbox
+*/
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    padding: 1rem;
+    margin: 0;
+}
+
+/* In class practice */
+/* If there are any spaces I'm using 1.618rem as the spacing between elements */
+.story-holder {
+}
+
+.story-holder .story {
+}
+
+.story-holder .story:nth-child(even) {
+}
+
+.story-holder .story .image {
+}
+
+.story-holder .story .description {
+}
+
+@media screen and (min-width: 576px){ }
+
+@media screen and (min-width: 768px){ /* No Styles here */ }
+
+@media screen and (min-width: 992px){ }
+
+@media screen and (min-width: 1200px){ /* No Styles here */ }
+/* End of in class practice */
+
+/*
+    Challenge 1
+    Quick Layout
+    * Please follow the screenshots for final results
+    * Some of the styles are provided below to help you as we have not discussed them during class
+    * Please add styles to the unorder list as it is a parent to the list items inside of it
+*/
+aside {
+    border: 1px dashed #6c82fb;
+    background-color: #1f1f1f;
+}
+
+aside a {
+    padding: 0.5rem 0.25rem;
+    display: block;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.copyright {
+    color: #ffffff;
+}
+
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    border: 1px dashed #6c82fb;
+}
+
+@media screen and (min-width: 576px){
+    .quick-layout {
+        border: 1px dashed #02026b;
+    }
+
+    main {
+        border: 1px dashed #1117d7;
+        min-height: 100vh;
+    }
+
+    aside {
+    }
+
+    aside ul {
+    }
+}
+/* End of Challenge 1 */
+
+
+/*
+    Challenge 2
+    Full Width Two Column
+    * Please follow the screenshots for final results
+    * Submission must be only of the CSS file, no updates can be made to the HTML
+    * It must be completed only with what we've learned in class up to this point
+    * No height values can be used in this challenge except for the ones below on a screen size > 768px
+    * No width values can be used in this challenge except for the ones below on a screen size > 768px
+    * NOTE: This also has a class modifier of .reversed that must reverse the order of the
+      content when on a screen size > 768px
+*/
+
+.full-width-two-column {
+}
+
+.full-width-two-column .image {
+    aspect-ratio: 16/9;
+    width: 100%;
+    background-color: #dadada;
+    border: 1px dashed #6c82fb;
+}
+
+@media screen and (min-width: 768px){
+    .full-width-two-column {
+        height: 100vh;
+    }
+
+    .full-width-two-column.reversed {
+    }
+
+    .full-width-two-column .image,
+    .full-width-two-column .content-holder {
+    }
+
+    .full-width-two-column .image {
+        aspect-ratio: auto;
+    }
+
+    .full-width-two-column .content-holder {
+        padding: 1.618rem;
+    }
+
+    .full-width-two-column .content-holder .content {
+        max-width: 20rem;
+    }
+}
+/* End of Challenge 2 */
+
+/*
+    * Window size styles
+    * Do not edit or delete this from examples
+*/
+#windowSize {
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    user-select: none;
+    z-index: 10;
+}
+/* End of Window size styles */

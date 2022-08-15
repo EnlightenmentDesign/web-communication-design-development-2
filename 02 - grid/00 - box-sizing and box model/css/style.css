@@ -1,0 +1,68 @@
+/*
+    Created by: Student Name - Student ID
+    Created on: Today's Date
+    Updated on: Today's Date
+    Project: Flexbox
+*/
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    padding: 1rem;
+    margin: 0;
+}
+
+.elementHolder {
+    margin: 0 auto;
+    border: 1px dashed gray;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: auto;
+}
+
+.element,
+#element {
+    display: block;
+    overflow: hidden;
+    width: 190px;
+    padding: 10px 20px;
+    border: 10px solid #4c5ff7;
+    margin: 20px;
+}
+
+p {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-bottom: 1.618rem;
+}
+
+p strong {
+    width: 7rem;
+    margin-right: 1rem;
+}
+
+/*
+    * Window size styles
+    * Do not edit or delete this from examples
+*/
+#windowSize {
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    user-select: none;
+    z-index: 10;
+}
+/* End of Window size styles */

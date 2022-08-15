@@ -1,0 +1,89 @@
+/*
+    Created by: Student Name - Student ID
+    Created on: Today's Date
+    Updated on: Today's Date
+    Project: Flexbox
+*/
+
+:root {
+    --p: 1.618rem;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.25em;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    border: 1px solid #1f1f1f;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: calc(var(--p) / 2) var(--p);
+    border: 1px solid #1f1f1f;
+}
+
+thead {
+    background-color: #1f1f1f;
+}
+
+thead th {
+    color: white;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+tbody tr:hover {
+    background-color: #efefef;
+}
+/* End of Table Styles */
+
+/* Code tag */
+code {
+    font-family: monospace;
+    color: crimson;
+    font-size: 0.75rem;
+    line-height: 1.618em;
+}
+/* End of code tag */
+
+/* Special classes */
+.w-14 {
+    width: 14rem;
+}
+/* End of Special classes */
+
+/*
+    * Window size styles
+    * Do not edit or delete this from examples
+*/
+#windowSize {
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    user-select: none;
+    z-index: 10;
+}
+/* End of Window size styles */

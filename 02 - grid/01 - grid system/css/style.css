@@ -1,0 +1,116 @@
+/*
+    Created by: Student Name - Student ID
+    Created on: Today's Date
+    Updated on: Today's Date
+    Project: Flexbox
+*/
+
+:root {
+    /* Colors */
+    --blue-1: #ebf1ff;
+    --blue-2: #d4e1ff;
+    --blue-3: #becffe;
+    --blue-4: #a8bdfd;
+    --blue-5: #93a9fd;
+    --blue-6: #6c82fb;
+    --blue-7: #4c5ff7;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+}
+
+.row {
+}
+
+[class^="col-"] {
+    width: 100%;
+}
+
+/* Styles for 'col-sm-...' grid */
+@media screen and (min-width: 576px){
+}
+
+/* Styles for 'col-md-...' grid */
+@media screen and (min-width: 768px){
+}
+
+/* Styles for 'col-lg-...' grid */
+@media screen and (min-width: 992px){
+}
+
+/* Styles for 'col-xl-...' grid */
+@media screen and (min-width: 1200px){
+}
+
+
+/* Article Styles */
+.article {
+}
+
+.article .image {
+}
+
+.article .description {
+}
+
+@media screen and (min-width: 576px){
+    .article .image {
+    }
+
+    .article .description {
+    }
+}
+
+@media screen and (min-width: 768px){ 
+    .article {
+    }
+
+    .article .image {
+    }
+
+    .article .description {
+    }
+}
+
+@media screen and (min-width: 992px){
+    .article {
+    }
+}
+/* End of article styles */
+
+/* Quick Layout */
+.round-image {
+}
+
+.round-image img {
+}
+/* End of Quick Layout */
+
+
+
+/*
+    * Window size styles
+    * Do not edit or delete this from examples
+*/
+#windowSize {
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    user-select: none;
+    z-index: 10;
+}
+/* End of Window size styles */

@@ -1,0 +1,51 @@
+/*
+    Created by: Student Name - Student ID
+    Created on: Today's Date
+    Updated on: Today's Date
+    Project: Flexbox
+*/
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    padding: 1rem;
+    margin: 0;
+}
+
+.parent {
+    border: 1px dashed #cccccc;
+    padding: 1rem;
+    display: flex;
+}
+
+.child {
+    border: 1px dotted #cccccc;
+    padding: 1rem;
+    aspect-ratio: 16/9;
+    min-width: 10rem;
+    max-width: 30vw;
+    color: #02026b;
+}
+
+.child:nth-child(odd) { background-color: #becffe; }
+.child:nth-child(even) { background-color: #93a9fd; }
+
+/*
+    * Window size styles
+    * Do not edit or delete this from examples
+*/
+#windowSize {
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    user-select: none;
+    z-index: 10;
+}
+/* End of Window size styles */
