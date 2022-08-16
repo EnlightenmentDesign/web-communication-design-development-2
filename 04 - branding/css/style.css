@@ -23,6 +23,9 @@
     --gray-3: #dadada;
 
     --white: white;
+
+    /* Other */
+    --table-padding: 1.618rem;
 }
 
 * {
@@ -66,8 +69,9 @@ table {
 
 table th,
 table td {
-    padding: calc(var(--p) / 2) var(--p);
+    padding: calc(var(--table-padding) / 2) var(--table-padding);
     border: 1px solid #1f1f1f;
+    vertical-align: top;
 }
 
 thead {
@@ -85,6 +89,12 @@ tbody tr:nth-child(odd) {
 
 tbody tr:hover {
     background-color: #efefef;
+}
+
+caption {
+    caption-side: bottom;
+    text-align: left;
+    padding: calc(var(--table-padding) / 2) 0;
 }
 /* End of Table Styles */
 

@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="Forms and Form Elements">
+        <meta name="description" content="Student Name - Student ID | Forms and Form Elements">
+        <meta name="author" content="Student Name">
+
+        <title>Student Name - Student ID | Forms and Form Elements</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Form &amp; form elements</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Form</h2>
+                    <p>From a markup standpoint I would recommend encapsulating your form label and field in a div as seen below. This will provide more flexibility to what you can do when styling and structuring.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Layout &amp; structure</h2>
+                    <table>
+                        <caption>Table 3.1 - Form structure</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="w-14">Markup</th>
+                                <th scope="col">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+<pre><code>&lt;form
+    method="post"
+    action="registration.php"
+    name="registration"
+&gt;
+    Form controls, labels, fieldsets
+&lt;/form&gt;</code></pre></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;...&lt;/legend&gt;
+&lt;/fieldset&gt;</code></pre></td>
+                                <td><fieldset>
+                                    <legend>Demographics</legend>
+                                </fieldset></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;div class="<b>form-group row</b>"&gt;
+    &lt;label for="firstName" class="<b>col-sm-2 col-form-label</b>"&gt;First Name:&lt;/label&gt;
+    &lt;div class="<b>col-sm-10</b>"&gt;
+        &lt;input type="text" name="firstName" id="firstName" class="<b>form-control</b>" /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre></td>
+                                <td><div class="form-group row">
+                                    <label for="firstName" class="col-sm-2 col-form-label">First Name:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="firstName" id="firstName" class="form-control" />
+                                    </div>
+                                </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;div class="<b>form-check</b>"&gt;
+    &lt;input class="<b>form-check-input</b>" type="radio" name="radio" id="radio" value="option1" checked&gt;
+    &lt;label class="<b>form-check-label</b>" for="radio"&gt;
+        Default radio
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre></td>
+                                <td><div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio" id="radio" value="option1" checked>
+                                    <label class="form-check-label" for="radio">
+                                        Default radio
+                                    </label>
+                                </div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Form Elements</h2>
+                    <table>
+                        <caption>Table 3.2 - Form elements</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="w-14">Markup</th>
+                                <th scope="col">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>text</b>"
+    name="username"
+    id="username"
+    class="<b>form-control</b>"
+    placeholder="Username"
+    max-length="30"
+/&gt;</code></pre></td>
+                                <td><input
+                                    type="text"
+                                    name="username"
+                                    id="username"
+                                    class="form-control"
+                                    placeholder="Username"
+                                    max-length="30"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>radio</b>"
+    <i><u>name="question"</u></i>
+    id="question"
+    class="<b>form-check-input</b>"
+    value="All of the above"
+    checked
+/&gt; All of the above</code></pre></td>
+                                <td><input
+                                    type="radio"
+                                    name="question20"
+                                    id="question20"
+                                    class="form-check-input"
+                                    value="All of the above"
+                                    checked
+                                /> All of the above</td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>checkbox</b>"
+    <i><u>name="workday"</u></i>
+    id="workday"
+    class="<b>form-check-input</b>"
+    value="Monday"
+    checked
+/&gt; Monday</code></pre></td>
+                                <td><input
+                                    type="checkbox"
+                                    name="workday"
+                                    id="workday"
+                                    class="form-check-input"
+                                    value="Monday"
+                                    checked
+                                /> Monday</td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="reset"
+    name="reset"
+    id="reset"
+    value="Reset"
+&gt;</code></pre></td>
+                                <td><input
+                                    type="reset"
+                                    name="reset"
+                                    id="reset"
+                                    value="Reset"
+                                    class="btn btn-secondary"
+                                ></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="submit"
+    name="submit"
+    id="submit"
+    value="Submit"
+&gt;</code></pre></td>
+                                <td><input
+                                    type="submit"
+                                    name="submit"
+                                    id="submit"
+                                    value="Submit"
+                                    class="btn btn-primary"
+                                ></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>hidden</b>"
+    name="timezone"
+    id="timezone"
+/&gt;</code></pre></td>
+                                <td><input
+                                    type="hidden"
+                                    name="timezone"
+                                    id="timezone"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>password</b>"
+    name="password"
+    id="password"
+    class="<b>form-control</b>"
+    max-length="30"
+/&gt;</code></pre></td>
+                                <td><input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    class="form-control"
+                                    max-length="30"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>email</b>"
+    name="email"
+    id="email"
+    class="<b>form-control</b>"
+    placeholder="user@domain.com"
+/&gt;</code></pre></td>
+                                <td><input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="user@domain.com"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>url</b>"
+    name="url"
+    id="url"
+    class="<b>form-control</b>"
+    placeholder="https://example.com"
+    pattern="https://.*"
+/&gt;</code></pre></td>
+                                <td><input
+                                    type="url"
+                                    name="url"
+                                    id="url"
+                                    class="form-control"
+                                    placeholder="https://example.com"
+                                    pattern="https://.*"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>number</b>"
+    name="students"
+    id="students"
+    class="<b>form-control</b>"
+    placeholder="20"
+/&gt;</code></pre></td>
+                                <td><input
+                                    type="number"
+                                    name="students"
+                                    id="students"
+                                    class="form-control"
+                                    placeholder="20"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>tel</b>"
+    name="phone"
+    id="phone"
+    class="<b>form-control</b>"
+    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+    placeholder="123-456-7890"
+/&gt;</code></pre></td>
+                                <td><input
+                                    type="tel"
+                                    name="phone"
+                                    id="phone"
+                                    class="form-control"
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    placeholder="123-456-7890"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>date</b>"
+    name="start"
+    id="start"
+    class="<b>form-control</b>"
+    value="2022-07-22"
+    min="2022-07-01"
+    max="2022-12-31"
+/&gt;</code></pre></td>
+                                <td><input
+                                    type="date"
+                                    name="start"
+                                    id="start"
+                                    class="form-control"
+                                    value="2022-07-22"
+                                    min="2022-07-01"
+                                    max="2022-12-31"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>datetime-local</b>"
+    id="meeting-time"
+    name="meeting-time"
+    class="<b>form-control</b>"
+    value="2018-06-12T19:30"
+    min="2022-07-01T00:00"
+    max="2022-12-31T00:00"
+/&gt;</code></pre></td>
+                                <td><input
+                                    type="datetime-local"
+                                    id="meeting-time"
+                                    name="meeting-time"
+                                    class="form-control"
+                                    value="2018-06-12T19:30"
+                                    min="2022-07-01T00:00"
+                                    max="2022-12-31T00:00"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    type="<b>file</b>"
+    name="studentImage"
+    id="studentImage"
+/&gt;</code></pre></td>
+                                <td><input
+                                    type="file"
+                                    name="studentImage"
+                                    id="studentImage"
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;select
+    name="cars"
+    id="cars"
+    class="<b>form-control</b>"
+&gt;
+    &lt;option value="volvo"&gt;...&lt;/option&gt;
+    ...
+&lt;/select&gt;</code></pre></td>
+                                <td><select
+                                    name="cars"
+                                    id="cars"
+                                    class="form-control"
+                                >
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="fiat">Fiat</option>
+                                    <option value="audi">Audi</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;select
+    name="cars"
+    id="cars"
+    class="<b>form-control</b>"
+&gt;
+    &lt;optgroup label="imported"&gt;
+        &lt;option value="volvo"&gt;...&lt;/option&gt;
+        ...
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre></td>
+                                <td><select
+                                    name="cars"
+                                    id="cars"
+                                    class="form-control"
+                                >
+                                    <optgroup label="Imported">
+                                        <option value="volvo">Volvo</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="fiat">Fiat</option>
+                                        <option value="audi">Audi</option>
+                                    </optgroup>
+                                    <optgroup label="Made in the U.S.">
+                                        <option value="ford">Ford</option>
+                                        <option value="gmc">GMC</option>
+                                        <option value="tesla">Tesla</option>
+                                    </optgroup>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;input
+    <b>list="ice-cream-flavor"</b>
+    id="ice-cream-choice"
+    name="ice-cream-choice"
+    class="<b>form-control</b>"
+/&gt;
+&lt;datalist id="ice-cream-flavor"&gt;
+    &lt;option value="Chocolate"&gt;
+    ...
+&lt;/datalist&gt;</code></pre></td>
+                                <td><input
+                                    list="ice-cream-flavors"
+                                    id="ice-cream-choice"
+                                    name="ice-cream-choice"
+                                    class="form-control"
+                                />
+                                <datalist id="ice-cream-flavors">
+                                    <option value="Chocolate">
+                                    <option value="Mint Chocolate">
+                                    <option value="Coconut">
+                                    <option value="Mint">
+                                    <option value="Strawberry">
+                                    <option value="Vanilla">
+                                </datalist></td>
+                            </tr>
+                            <tr>
+                                <td>
+<pre><code>&lt;textarea
+    name="comments"
+    class="<b>form-control</b>"
+    placeholder="Add your comments"
+    maxlength="200"
+&gt;&lt;/textarea&gt;</code></pre></td>
+                                <td><textarea
+                                    name="comments"
+                                    class="form-control"
+                                    placeholder="Add your comments"
+                                    maxlength="200"
+                                ></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="windowSize"></div>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>

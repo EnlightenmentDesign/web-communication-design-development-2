@@ -74,6 +74,12 @@ tbody tr:nth-child(odd) {
 tbody tr:hover {
     background-color: #efefef;
 }
+
+caption {
+    caption-side: bottom;
+    text-align: left;
+    padding: calc(var(--table-padding) / 2) 0;
+}
 /* End of Table Styles */
 
 /* Code tag */
