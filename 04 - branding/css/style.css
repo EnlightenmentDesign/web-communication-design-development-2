@@ -5,6 +5,26 @@
     Project: Flexbox
 */
 
+:root {
+    /* Grid */
+
+    /* Branding */
+    --primary: blue;
+    --primary-hover: blue;
+    --secondary: blue;
+    --secondary-hover: blue;
+    --tertiary: blue;
+    --tertiary-hover: blue;
+    --font-color: black;
+
+    --gray-0: #222222;
+    --gray-1: #666666;
+    --gray-2: #999999;
+    --gray-3: #dadada;
+
+    --white: white;
+}
+
 * {
     box-sizing: border-box;
     position: relative;
@@ -14,6 +34,117 @@ body {
     padding: 1rem;
     margin: 0;
 }
+
+/* Images */
+img {
+    max-width: 100%;
+}
+
+.round-image {
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.round-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* End of Images */
+
+/* TASK: Paste your typography styles here */
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    border: 1px solid #1f1f1f;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: calc(var(--p) / 2) var(--p);
+    border: 1px solid #1f1f1f;
+}
+
+thead {
+    background-color: #1f1f1f;
+}
+
+thead th {
+    color: white;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+tbody tr:hover {
+    background-color: #efefef;
+}
+/* End of Table Styles */
+
+/* Code tag */
+code {
+    font-family: monospace;
+    color: crimson;
+    font-size: 0.75rem;
+    line-height: 1.618em;
+}
+/* End of code tag */
+
+/* Special classes */
+.w-14 {
+    width: 14rem;
+}
+/* End of Special classes */
+
+/* TASK: Paste your grid system here */
+
+/* TASK: Paste the styles for the Flexbox Assignment: In-Class Practice */
+
+/* Branding */
+.swatch {
+    aspect-ratio: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 1px solid var(--gray-0);
+}
+
+.swatch.primary { background-color: var(--primary) }
+.swatch.primary-hover { background-color: var(--primary-hover) }
+.swatch.secondary { background-color: var(--secondary) }
+.swatch.secondary-hover { background-color: var(--secondary-hover) }
+.swatch.tertiary { background-color: var(--tertiary) }
+.swatch.tertiary-hover { background-color: var(--tertiary-hover) }
+.swatch.font-color { background-color: var(--font-color) }
+.swatch.gray-0 { background-color: var(--gray-0) }
+.swatch.gray-1 { background-color: var(--gray-1) }
+.swatch.gray-2 { background-color: var(--gray-2) }
+.swatch.gray-3 { background-color: var(--gray-3) }
+.swatch.white { background-color: var(--white) }
+
+.swatch.primary,
+.swatch.primary-hover,
+.swatch.secondary,
+.swatch.secondary-hover,
+.swatch.tertiary,
+.swatch.tertiary-hover,
+.swatch.primary,
+.swatch.font-color,
+.swatch.gray-0,
+.swatch.gray-1 {
+    color: var(--white);
+}
+
+/* End of Branding */
 
 /*
     * Window size styles
