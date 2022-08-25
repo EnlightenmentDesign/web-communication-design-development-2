@@ -3,6 +3,14 @@ This defines a flex container; inline or block depending on the given value. It 
 
 ```
 .parent {
-    display: flex; /* inline-flex */
+    display: flex;
 }
 ```
+
+```
+.parent {
+    display: inline-flex;
+}
+```
+
+This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
