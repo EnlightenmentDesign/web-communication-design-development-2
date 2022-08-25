@@ -3,6 +3,6 @@ This defines a flex container; inline or block depending on the given value. It 
 
 ```
 .parent {
-    display: flex;
+    display: flex; /* inline-flex */
 }
 ```
