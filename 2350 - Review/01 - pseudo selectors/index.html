@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="CSS Pesudo Selectors">
+        <meta name="description" content="Student Name - Student ID | CSS Pesudo Selectors">
+        <meta name="author" content="Student Name">
+
+        <title>Student Name - Student ID | CSS Pesudo Selectors</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div class="holder">
+            <div class="controls">
+                <h1>position</h1>
+                <p>Pseudo class selectors are CSS selectors with a colon preceding them.</p>
+                <ul>
+                    <li><button onclick="selector('first-child')">:first-child</button></li>
+                    <li><button onclick="selector('last-child')">:last-child</button></li>
+                    <li><button onclick="selector('only-of-type')">:only-of-type</button></li>
+                    <li><button onclick="selector('nth-child-0')">:nth-child()</button></li>
+                    <li><button onclick="selector('nth-child-1')">:nth-child(2n)</button></li>
+                    <li><button onclick="selector('nth-child-2')">:nth-child(4n-1)</button></li>
+                    <li><button onclick="selector('nth-child-3')">:nth-child(odd)</button></li>
+                    <li><button onclick="selector('first-of-type')">:first-of-type</button></li>
+                    <li><button onclick="selector('last-of-type')">:last-of-type</button></li>
+                </ul>
+                <p>All examples came from: <a href="https://css-tricks.com/pseudo-class-selectors/" target="_blank">https://css-tricks.com/pseudo-class-selectors/</a></p>
+                <p>I would also encourage you to read: <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">https://www.w3schools.com/cssref/css_selectors.asp</a></p>
+            </div>
+            <div class="example">
+                <code><span id="selection">:<em>selector</em></span></code>
+                <div class="selectionValues">
+                    <ul>
+                        <li>list item one</li>
+                        <li>list item two</li>
+                        <li>list item three</li>
+                        <li>list item four</li>
+                        <li>list item five</li>
+                    </ul>
+                    <div>Empty &lt;div&gt;</div>
+                    <p class="lipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis sem faucibus, laoreet mauris sed, pharetra nulla. Sed suscipit mauris sed ante tincidunt faucibus quis id leo. Morbi nibh lectus, euismod ut consectetur dictum, dapibus ac metus. Maecenas ullamcorper porttitor mauris ac finibus. Nulla fringilla imperdiet commodo. Morbi euismod pulvinar tincidunt. Ut vitae suscipit metus.</p>
+                    <p class="lipsum2">Aenean elementum nisi sed risus tincidunt, ac varius tellus blandit. Aenean massa metus, pulvinar quis augue eu, convallis blandit orci. Phasellus commodo sit amet massa posuere interdum.</p>
+                    <div>Last &lt;div&gt; in the list</div>
+                    <p class="lipsum3" lang="fr">Curabitur ultrices tristique enim. Mauris vitae maximus nulla. Donec iaculis, magna et volutpat tristique, libero erat congue nisi, pulvinar mollis justo metus a lorem. Maecenas hendrerit justo id sapien fermentum, nec vestibulum ex sollicitudin.</p>
+                    <p class="lipsum4">In condimentum odio vel libero interdum eleifend. Etiam id odio quis purus feugiat posuere facilisis eu justo. Phasellus lacus tortor, tincidunt varius felis hendrerit, vulputate molestie justo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="windowSize"></div>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
