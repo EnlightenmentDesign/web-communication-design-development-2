@@ -1,5 +1,5 @@
 # Grid System
-To create our Grid system we are going to use [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), [calc()](https://developer.mozilla.org/en-US/docs/Web/CSS/calc) and [flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+To create our Grid system we are going to use [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), [calc()](https://developer.mozilla.org/en-US/docs/Web/CSS/calc) and [flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 
 ## Starting out
 Notice that in our CSS file we have a [:root](https://developer.mozilla.org/en-US/docs/Web/CSS/:root) selector. This matches the root element of a tree representing the document. Again, this would in turn mean that we are selecting the `html` tag.
@@ -90,7 +90,7 @@ These three elements create the separation between content and structure that we
 
 Let's style our CSS.
 
-#### CSS
+#### Initial CSS & HTML
 In the CSS we already have a class selector for `container`, `row` and we will create one for `col` (which we will update as we move forward).
 
 ```
@@ -101,12 +101,11 @@ In the CSS we already have a class selector for `container`, `row` and we will c
 .row {
 }
 
-.col {
-
-}
-
 [class^="col-"] {
     width: 100%;
+}
+
+.col {
 }
 ```
 
@@ -166,7 +165,7 @@ In our column what we are doing is using the `--grid-width` variable to make sur
 
 However, as you can see, we need to provide more in order to make it more useful for our layout.
 
-So let's go ahead and update our HTML and CSS to create different columns.
+So let's go ahead and update our HTML and CSS to create different columns. I'm also going to add some background-colors to the columns to make it easier to see as you are visualizing your changes.
 
 *00-index.html*
 ```
@@ -217,34 +216,353 @@ So let's go ahead and update our HTML and CSS to create different columns.
 .col-1 {
     flex: 0 0 var(--col-1);
     max-width: var(--col-1);
+    background-color: var(--blue-1);
 }
 
 .col-2 {
     flex: 0 0 var(--col-2);
     max-width: var(--col-2);
+    background-color: var(--blue-2);
 }
 
 .col-3 {
     flex: 0 0 var(--col-3);
     max-width: var(--col-3);
+    background-color: var(--blue-3);
 }
 
 .col-4 {
     flex: 0 0 var(--col-4);
     max-width: var(--col-4);
+    background-color: var(--blue-4);
 }
 
 .col-5 {
     flex: 0 0 var(--col-5);
     max-width: var(--col-5);
+    background-color: var(--blue-5);
 }
 
 .col-6 {
     flex: 0 0 var(--col-6);
     max-width: var(--col-6);
+    background-color: var(--blue-6);
 }
 ```
 
+If you refresh the page you should be able to see that all the columns are now present and holding the right number of columns available for that column to exist. Please refer to **Determine the number of column** if you have any doubts on how we came up with the way these columns are laid out.
+
+### Media Queries
+
+This is a great start to our grid system, but you will notice that now that the columns are in place, if you make your browser window wider and smaller the grid expands from one edge of the browser to the other and does not change. In order to create a layout that will be able to adjust based on how you would like to style the site we will need to start adding some `media queries`. These media queries will help us create breakpoints for how our system will work.
+
+The media queries we are going to use follow t-shirt size standards:
+* **xs**: (default, no media queries necessary)
+* **sm**: `min-width: 576px`
+* **md**: `min-width: 768px`
+* **lg**: `min-width: 992px`
+* **xl**: `min-width: 1200px`
+
+#### Container
+```
+.container { ... } /* Default value we had previously setup */
+
+@media screen and (min-width: 576px){ .container { max-width: 576px; }} /* sm */
+
+@media screen and (min-width: 768px){ .container { max-width: 768px; }} /* md */
+
+@media screen and (min-width: 992px){ .container { max-width: 992px; }} /* lg */
+
+@media screen and (min-width: 1200px){ .container { max-width: 1200px; }} /* xl */
+```
+
+What we did with the container effectively is setup our breakpoints so that at each breakpoin the container width will not exceed the breakpoint size. This will help keep the container centered on the page and not expanding from one edge of the browser to the next.
+
+We are also going to add a new class called `.container-fluid` that will allow us to in some cases make the content go from one side of the browser to the other. This will make it simpler to combine full width layouts and framed layouts using our grid system.
+```
+.container-fluid,
+.container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.25rem;
+}
+```
+
+#### Columns
+```
+.col-xs-1 {
+    flex: 0 0 var(--col-1);
+    max-width: var(--col-1);
+    background-color: var(--blue-1);
+}
+
+.col-xs-2 {
+    flex: 0 0 var(--col-2);
+    max-width: var(--col-2);
+    background-color: var(--blue-2);
+}
+
+.col-xs-3 {
+    flex: 0 0 var(--col-3);
+    max-width: var(--col-3);
+    background-color: var(--blue-3);
+}
+
+.col-xs-4 {
+    flex: 0 0 var(--col-4);
+    max-width: var(--col-4);
+    background-color: var(--blue-4);
+}
+
+.col-xs-5 {
+    flex: 0 0 var(--col-5);
+    max-width: var(--col-5);
+    background-color: var(--blue-5);
+}
+
+.col-xs-6 {
+    flex: 0 0 var(--col-6);
+    max-width: var(--col-6);
+    background-color: var(--blue-6);
+}
+```
+
+By adding the differentiator of `xs` to the class we are now able to select which breakpoint class selector we would like to target when we are at a specific breakpoint. This will determine on how the content will be laid out on the page.
+
+We are going to do the same with our other breakpoints `sm`, `md`, `lg`, and `xl`.
+```
+/* Styles for 'col-sm-...' grid */
+@media screen and (min-width: 576px){
+    .col-sm-1 {
+        flex: 0 0 var(--col-1);
+        max-width: var(--col-1);
+        background-color: var(--blue-1);
+    }
+    
+    .col-sm-2 {
+        flex: 0 0 var(--col-2);
+        max-width: var(--col-2);
+        background-color: var(--blue-2);
+    }
+    
+    .col-sm-3 {
+        flex: 0 0 var(--col-3);
+        max-width: var(--col-3);
+        background-color: var(--blue-3);
+    }
+    
+    .col-sm-4 {
+        flex: 0 0 var(--col-4);
+        max-width: var(--col-4);
+        background-color: var(--blue-4);
+    }
+    
+    .col-sm-5 {
+        flex: 0 0 var(--col-5);
+        max-width: var(--col-5);
+        background-color: var(--blue-5);
+    }
+    
+    .col-sm-6 {
+        flex: 0 0 var(--col-6);
+        max-width: var(--col-6);
+        background-color: var(--blue-6);
+    }
+}
+
+/* Styles for 'col-md-...' grid */
+@media screen and (min-width: 768px){
+    .col-md-1 {
+        flex: 0 0 var(--col-1);
+        max-width: var(--col-1);
+        background-color: var(--blue-1);
+    }
+    
+    .col-md-2 {
+        flex: 0 0 var(--col-2);
+        max-width: var(--col-2);
+        background-color: var(--blue-2);
+    }
+    
+    .col-md-3 {
+        flex: 0 0 var(--col-3);
+        max-width: var(--col-3);
+        background-color: var(--blue-3);
+    }
+    
+    .col-md-4 {
+        flex: 0 0 var(--col-4);
+        max-width: var(--col-4);
+        background-color: var(--blue-4);
+    }
+    
+    .col-md-5 {
+        flex: 0 0 var(--col-5);
+        max-width: var(--col-5);
+        background-color: var(--blue-5);
+    }
+    
+    .col-md-6 {
+        flex: 0 0 var(--col-6);
+        max-width: var(--col-6);
+        background-color: var(--blue-6);
+    }
+}
+
+/* Styles for 'col-lg-...' grid */
+@media screen and (min-width: 992px){
+    .col-lg-1 {
+        flex: 0 0 var(--col-1);
+        max-width: var(--col-1);
+        background-color: var(--blue-1);
+    }
+    
+    .col-lg-2 {
+        flex: 0 0 var(--col-2);
+        max-width: var(--col-2);
+        background-color: var(--blue-2);
+    }
+    
+    .col-lg-3 {
+        flex: 0 0 var(--col-3);
+        max-width: var(--col-3);
+        background-color: var(--blue-3);
+    }
+    
+    .col-lg-4 {
+        flex: 0 0 var(--col-4);
+        max-width: var(--col-4);
+        background-color: var(--blue-4);
+    }
+    
+    .col-lg-5 {
+        flex: 0 0 var(--col-5);
+        max-width: var(--col-5);
+        background-color: var(--blue-5);
+    }
+    
+    .col-lg-6 {
+        flex: 0 0 var(--col-6);
+        max-width: var(--col-6);
+        background-color: var(--blue-6);
+    }
+}
+
+/* Styles for 'col-xl-...' grid */
+@media screen and (min-width: 1200px){
+    .col-xl-1 {
+        flex: 0 0 var(--col-1);
+        max-width: var(--col-1);
+        background-color: var(--blue-1);
+    }
+    
+    .col-xl-2 {
+        flex: 0 0 var(--col-2);
+        max-width: var(--col-2);
+        background-color: var(--blue-2);
+    }
+    
+    .col-xl-3 {
+        flex: 0 0 var(--col-3);
+        max-width: var(--col-3);
+        background-color: var(--blue-3);
+    }
+    
+    .col-xl-4 {
+        flex: 0 0 var(--col-4);
+        max-width: var(--col-4);
+        background-color: var(--blue-4);
+    }
+    
+    .col-xl-5 {
+        flex: 0 0 var(--col-5);
+        max-width: var(--col-5);
+        background-color: var(--blue-5);
+    }
+    
+    .col-xl-6 {
+        flex: 0 0 var(--col-6);
+        max-width: var(--col-6);
+        background-color: var(--blue-6);
+    }
+}
+```
+
+In your local repository you should check out how the following pages look like when you add those styles:
+* 01 - grid-xs.html
+* 02 - grid-sm.html
+* 03 - grid-md.html
+* 04 - grid-lg.html
+* 05 - grid-xl.html
+
+Notice that the columns are butted up against each other, so we need to create a gutter between the elements. Let's add them as follows:
+```
+[class^="col-"] {
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+}
+```
+
+By doing the above we are now able to select all the classes that start with `col-` and provide them a padding to the left and right of 1rem which will create a separation between the columns themselves.
+
+We also added a `width: 100%;` and `max-width: 100%`, this ensures that for example if you setup a div to be `col-md-6` which will only be called when the browser is at least `768px` and the browser size falls below that amount, any divs inside of that row will occupy at that point `100%` the width of the row.
+
+Try commenting the code above and make the browser smaller on the `04 - grid-lg.html` file and see what happens before and after you comment that line.
+
+This brings us to the end of the grid creation!
+
+## Bonus information
+If you copy the following styles which we created during our In Class Flexbox Practice you should be able to view the `06 - story.html` and `07 - quick-layout.html` files and see how much easier it is to use the grid system to align elements next to each other.
+
+```
+/* Story styles */
+.story {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 1.618rem;
+}
+
+.story:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.story .image {
+    aspect-ratio: 1;
+    background-color: #dadada;
+    flex: 0 0 calc(50% - 1.618rem); 
+}
+
+.story .description {
+    flex: 1 0 50%;
+}
+
+@media screen and (min-width: 576px){
+    .story .image {
+        flex-basis: 30%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .story,
+    .story:nth-child(even) {
+        flex-flow: column wrap;
+    }
+
+    .story .image {
+        aspect-ratio: 16/9;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+}
+/* End of Story styles */
+```
 
 # Final Solution
 
@@ -307,6 +625,7 @@ img {
 /* End of Images */
 
 /* Grid System */
+.container-fluid,
 .container {
     width: 100%;
     padding-left: 1rem;
@@ -316,25 +635,10 @@ img {
     margin-bottom: 1.25rem;
 }
 
-/* sm */
-@media screen and (min-width: 576px){
-    .container { max-width: 576px; }
-}
-
-/* md */
-@media screen and (min-width: 768px){
-    .container { max-width: 768px; }
-}
-
-/* lg */
-@media screen and (min-width: 992px){
-    .container { max-width: 992px; }
-}
-
-/* xl */
-@media screen and (min-width: 1200px){
-    .container { max-width: 1200px; }
-}
+@media screen and (min-width: 576px){ .container { max-width: 576px; }} /* sm */
+@media screen and (min-width: 768px){ .container { max-width: 768px; }} /* md */
+@media screen and (min-width: 992px){ .container { max-width: 992px; }} /* lg */
+@media screen and (min-width: 1200px){ .container { max-width: 1200px; }} /* xl */
 
 .row {
     display: flex;
@@ -547,10 +851,7 @@ img {
 
 /* End of Grid System */
 
-
-/* TASK: Paste the styles for the Flexbox Assignment: In-Class Practice */
-/* In class practice */
-/* If there are any spaces I'm using 1.618rem as the spacing between elements */
+/* Story styles */
 .story {
     display: flex;
     flex-flow: row nowrap;
@@ -558,10 +859,6 @@ img {
     align-items: flex-start;
     align-content: flex-start;
     gap: 1.618rem;
-}
-
-.story:nth-child(even) {
-    flex-direction: row-reverse;
 }
 
 .story .image {
@@ -580,11 +877,8 @@ img {
     }
 }
 
-@media screen and (min-width: 768px){ /* No Styles here */ }
-
 @media screen and (min-width: 992px){
-    .story,
-    .story:nth-child(even) {
+    .story {
         flex-flow: column wrap;
     }
 
@@ -594,9 +888,7 @@ img {
         width: 100%;
     }
 }
-
-@media screen and (min-width: 1200px){ /* No Styles here */ }
-/* End of in class practice */
+/* End of Story styles */
 
 
 /*
