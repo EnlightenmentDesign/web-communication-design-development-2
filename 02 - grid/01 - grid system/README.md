@@ -155,6 +155,96 @@ What we are doing here with the `.row` selector is making it into a *flexbox* el
 
 By setting the `margin-left: -1rem;` and `margin-right: -1rem` is taking the space that the padding from the container to make sure that the columns inside the row fit correctly.
 
+##### Column
+```
+.col {
+    flex: 0 0 var(--grid-width);
+    max-width: var(--grid-width);
+}
+```
+In our column what we are doing is using the `--grid-width` variable to make sure that all our columns we created in the HTML document have the same width.
+
+However, as you can see, we need to provide more in order to make it more useful for our layout.
+
+So let's go ahead and update our HTML and CSS to create different columns.
+
+*00-index.html*
+```
+<div class="container">
+    <div class="row">
+        <div class="col-1">1</div>
+        <div class="col-1">2</div>
+        <div class="col-1">3</div>
+        <div class="col-1">4</div>
+        <div class="col-1">5</div>
+        <div class="col-1">6</div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-2">1</div>
+        <div class="col-2">2</div>
+        <div class="col-2">3</div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-3">1</div>
+        <div class="col-3">2</div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-4">1</div>
+        <div class="col-2">2</div>
+    </div>
+</div>'
+<div class="container">
+    <div class="row">
+        <div class="col-5">1</div>
+        <div class="col-1">2</div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6">1</div>
+    </div>
+</div>
+```
+
+*style.css*
+```
+.col-1 {
+    flex: 0 0 var(--col-1);
+    max-width: var(--col-1);
+}
+
+.col-2 {
+    flex: 0 0 var(--col-2);
+    max-width: var(--col-2);
+}
+
+.col-3 {
+    flex: 0 0 var(--col-3);
+    max-width: var(--col-3);
+}
+
+.col-4 {
+    flex: 0 0 var(--col-4);
+    max-width: var(--col-4);
+}
+
+.col-5 {
+    flex: 0 0 var(--col-5);
+    max-width: var(--col-5);
+}
+
+.col-6 {
+    flex: 0 0 var(--col-6);
+    max-width: var(--col-6);
+}
+```
+
 
 # Final Solution
 
