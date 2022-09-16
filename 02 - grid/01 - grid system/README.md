@@ -1,4 +1,159 @@
-# Current Solution
+# Grid System
+To create our Grid system we are going to use [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), [calc()](https://developer.mozilla.org/en-US/docs/Web/CSS/calc) and [flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+
+## Starting out
+Notice that in our CSS file we have a [:root](https://developer.mozilla.org/en-US/docs/Web/CSS/:root) selector. This matches the root element of a tree representing the document. Again, this would in turn mean that we are selecting the `html` tag.
+
+```
+:root {
+    /* Grid */
+
+    /* Colors */
+    --blue-1: #ebf1ff;
+    --blue-2: #d4e1ff;
+    --blue-3: #becffe;
+    --blue-4: #a8bdfd;
+    --blue-5: #93a9fd;
+    --blue-6: #6c82fb;
+}
+```
+
+Please see that I have already provided a few values in the root selector.
+
+These values represent comments `/* */` as well as CSS variables (i.e.: `--blue-1`). These variables are created in order to make it easier to update as well as for reusability. The purpose of a variable is to serve as a container for a value that can later on be used as an attribute to a CSS property.
+
+The structure of a CSS variable can be seen in the example: `--blue-1: #ebf1ff`. However, when we are ready to use that variable we would do something like this: `background-color: var(--blue-1)`.
+
+## Let's build the grid system
+### Determine the number of columns
+In order to have a structure, we have to decide on the number of columns we will be using for our grid. In our case we are going to use **6 columns**. This would help us make them even and allocate the right space between elements and easily divisible.
+
+This will look something like this:
+```
+:root {
+    /* Grid */
+    --number-of-columns: 6;
+    --grid-width: calc(100% / --number-of-columns);
+    ...
+}
+```
+
+What we are doing in the above code is taking the full width of an element (`100%`) and dividing it by the `--number-of-columns` variable we created. By doing this we have determined that each `--grid-width` value is going to be the product of that division. In other words, if we had one element, that element can be divided into **6 columns** which in turn can then be split up to hold a value that would span the number of columns.
+
+So if we were to do this mathematically we can take a **row** which has a width of **100%** and that row has the potential to hold:
+* 6 elements that have a width of **1 column width**
+* 3 elements that have a width of **2 column width**
+* 2 elements that have a width of **3 column width**
+* 1 element that has a width of **4 column width** and another element that has a width of **2 column width**; and
+* 1 element that has a width of **5 column width** and another element that has a width of **1 column width**
+
+*Notice that the above all add up to a total of 6 columns*
+
+With this knowledge we can now create our own column widths.
+```
+:root {
+    /* Grid */
+    --number-of-columns: 6;
+    --grid-width: calc(100% / --number-of-columns);
+    --col-1: calc(var(--grid-width) * 1);
+    --col-2: calc(var(--grid-width) * 2);
+    --col-3: calc(var(--grid-width) * 3);
+    --col-4: calc(var(--grid-width) * 4);
+    --col-5: calc(var(--grid-width) * 5);
+    --col-6: calc(var(--grid-width) * 6);
+    ...
+}
+```
+
+
+### Setup the grid structure ###
+After creating the column declarations inside `:root` we are now ready to create our grid structure.
+
+If you look at the [00-index.html](https://github.com/EnlightenmentDesign/web-communication-design-development-2/blob/main/02%20-%20grid/01%20-%20grid%20system/00-index.html) file, you will see that we created a set of columns in place.
+
+```
+<div class="container">
+    <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+    </div>
+</div>
+```
+
+The structure for our grid system is going to consist in a nested set of divs that start with a `<div class='container'></div>`, and then `<div class='row'></div>`, and lastly the `<div class='col'></div>` that is going to hold the information.
+
+These three elements create the separation between content and structure that we are going to use to create our grid system.
+
+Let's style our CSS.
+
+#### CSS
+In the CSS we already have a class selector for `container`, `row` and we will create one for `col` (which we will update as we move forward).
+
+```
+/* Grid System */
+.container {
+}
+
+.row {
+}
+
+.col {
+
+}
+
+[class^="col-"] {
+    width: 100%;
+}
+```
+
+Let's edit the `.container` to look like this:
+```
+.container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.25rem;
+}
+```
+
+The reason why we are setting up the container in this matter is to make sure that the default width of the container is 100% when on a mobile device. Our goal is to design our grid to be built from mobile-desktop. 
+
+We are also giving a `padding-left` and `padding-right` of `1rem` to create some separation and structure to the content.
+
+By setting up our `margin-left: auto;` and `margin-right: auto;` we are letting the browser know that if the width of the `.container` is smaller than the browser width then it should take the space to the left and the right of the element and space it evenly between those two sides, this will effectively make the `<div>` horizontally centered on the page.
+
+And we are setting up the `margin-bottom: 1.25rem;` to give a separation for when we have multiple containers one after another like the example below:
+```
+<div class="container">...</div >
+<div class="container">...</div >
+<div class="container">...</div >
+```
+
+Now, let's edit the `.row` selector to look like this:
+```
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+```
+
+What we are doing here with the `.row` selector is making it into a *flexbox* element. 
+
+By setting the `margin-left: -1rem;` and `margin-right: -1rem` is taking the space that the padding from the container to make sure that the columns inside the row fit correctly.
+
+
+# Final Solution
 
 ```
 /*
@@ -10,7 +165,8 @@
 
 :root {
     /* Grid */
-    --grid-width: calc(100% / 6);
+    --number-of-columns: 6;
+    --grid-width: calc(100% / --number-of-columns);
     --col-1: calc(var(--grid-width) * 1);
     --col-2: calc(var(--grid-width) * 2);
     --col-3: calc(var(--grid-width) * 3);
@@ -88,7 +244,6 @@ img {
 }
 
 .row {
-    flex: 0 0 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
