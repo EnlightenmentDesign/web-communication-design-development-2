@@ -110,6 +110,8 @@ In the CSS we already have a class selector for `container`, `row` and we will c
 }
 ```
 
+##### Container
+
 Let's edit the `.container` to look like this:
 ```
 .container {
@@ -135,6 +137,7 @@ And we are setting up the `margin-bottom: 1.25rem;` to give a separation for whe
 <div class="container">...</div >
 ```
 
+##### Row
 Now, let's edit the `.row` selector to look like this:
 ```
 .row {
