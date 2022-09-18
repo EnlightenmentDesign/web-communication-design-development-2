@@ -20,13 +20,13 @@ Notice that in our CSS file we have a [:root](https://developer.mozilla.org/en-U
 
 Please see that I have already provided a few values in the root selector.
 
-These values represent comments `/* */` as well as CSS variables (i.e.: `--blue-1`). These variables are created in order to make it easier to update as well as for reusability. The purpose of a variable is to serve as a container for a value that can later on be used as an attribute to a CSS property.
+These values represent comments `/* */` as well as CSS variables (i.e.: `--blue-1`). These variables are created to make it easier to update as well as for reusability. The purpose of a variable is to serve as a container for a value that can later be used as an attribute to a CSS property.
 
 The structure of a CSS variable can be seen in the example: `--blue-1: #ebf1ff`. However, when we are ready to use that variable we would do something like this: `background-color: var(--blue-1)`.
 
 ## Let's build the grid system
 ### Determine the number of columns
-In order to have a structure, we have to decide on the number of columns we will be using for our grid. In our case we are going to use **6 columns**. This would help us make them even and allocate the right space between elements and easily divisible.
+to have a structure, we have to decide on the number of columns we will be using for our grid. In our case we are going to use **6 columns**. This would help us make them even and allocate the right space between elements and easily divisible.
 
 This will look something like this:
 ```
@@ -163,7 +163,7 @@ By setting the `margin-left: -1rem;` and `margin-right: -1rem` is taking the spa
 ```
 In our column what we are doing is using the `--grid-width` variable to make sure that all our columns we created in the HTML document have the same width.
 
-However, as you can see, we need to provide more in order to make it more useful for our layout.
+However, as you can see, we need to provide more to make it more useful for our layout.
 
 So let's go ahead and update our HTML and CSS to create different columns. I'm also going to add some background-colors to the columns to make it easier to see as you are visualizing your changes.
 
@@ -254,7 +254,7 @@ If you refresh the page you should be able to see that all the columns are now p
 
 ### Media Queries
 
-This is a great start to our grid system, but you will notice that now that the columns are in place, if you make your browser window wider and smaller the grid expands from one edge of the browser to the other and does not change. In order to create a layout that will be able to adjust based on how you would like to style the site we will need to start adding some `media queries`. These media queries will help us create breakpoints for how our system will work.
+This is a great start to our grid system, but you will notice that now that the columns are in place, if you make your browser window wider and smaller the grid expands from one edge of the browser to the other and does not change. to create a layout that will be able to adjust based on how you would like to style the site we will need to start adding some `media queries`. These media queries will help us create breakpoints for how our system will work.
 
 The media queries we are going to use follow t-shirt size standards:
 * **xs**: (default, no media queries necessary)
@@ -276,7 +276,7 @@ The media queries we are going to use follow t-shirt size standards:
 @media screen and (min-width: 1200px){ .container { max-width: 1200px; }} /* xl */
 ```
 
-What we did with the container effectively is setup our breakpoints so that at each breakpoin the container width will not exceed the breakpoint size. This will help keep the container centered on the page and not expanding from one edge of the browser to the next.
+What we did with the container effectively is setup our breakpoints so that at each breakpoint the container width will not exceed the breakpoint size. This will help keep the container centered on the page and not expanding from one edge of the browser to the next.
 
 We are also going to add a new class called `.container-fluid` that will allow us to in some cases make the content go from one side of the browser to the other. This will make it simpler to combine full width layouts and framed layouts using our grid system.
 ```
