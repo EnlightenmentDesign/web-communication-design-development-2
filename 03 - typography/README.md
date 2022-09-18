@@ -311,6 +311,8 @@ dd:last-of-type {
 
 ## Final Solution
 ```
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:wght@700&display=swap');
+
 :root {
     /* Typography */
     --base-font-size: 20px;
@@ -320,6 +322,19 @@ dd:last-of-type {
     --h3-font-size: calc(1rem * var(--base-scale));
     --h2-font-size: calc(1rem * var(--base-scale) * var(--base-scale));
     --h1-font-size: calc(1rem * var(--base-scale) * var(--base-scale) * var(--base-scale));
+}
+
+html {
+    font-size: var(--base-font-size);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: var(--base-line-height);
+    font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 400;
 }
 
 /* Typography */

@@ -5,8 +5,17 @@
     Project: Flexbox
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:wght@700&display=swap');
+
 :root {
-    --p: 1.618rem;
+    /* Typography */
+    --base-font-size: 20px;
+    --base-scale: 1.25;
+    --base-line-height: calc(1em * var(--base-scale));
+    --h4-font-size: 1rem;
+    --h3-font-size: calc(1rem * var(--base-scale));
+    --h2-font-size: calc(1rem * var(--base-scale) * var(--base-scale));
+    --h1-font-size: calc(1rem * var(--base-scale) * var(--base-scale) * var(--base-scale));
 }
 
 * {
@@ -14,11 +23,17 @@
     position: relative;
 }
 
+html {
+    font-size: var(--base-font-size);
+}
+
 body {
     padding: 0;
     margin: 0;
     font-size: 1rem;
-    line-height: 1.25em;
+    line-height: var(--base-line-height);
+    font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 400;
 }
 
 /* Images */
@@ -42,7 +57,106 @@ img {
 /* End of Images */
 
 /* Typography */
+h1, h2, h3 ,h4 ,h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Libre Baskerville', 'Georgia', 'Times New Roman', serif;
+    line-height: var(--base-line-height);
+    font-weight: 700;
+    margin-bottom: var(--base-line-height);
+}
 
+h1, .h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2, .h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3, .h3 {
+    font-size: var(--h3-font-size);
+}
+
+h4, .h4 {
+    font-size: var(--h4-font-size);
+}
+
+/* Paragraph */
+p {
+    margin-bottom: var(--base-line-height);
+}
+
+/* Blockquotes */
+blockquote {
+    font-size: calc(1rem * var(--base-scale));
+}
+
+blockquote p:first-of-type::before {
+    content: open-quote;
+}
+
+blockquote p:last-of-type::after {
+    content: close-quote;
+}
+
+blockquote.text-center { text-align: center; }
+
+blockquote.text-right { text-align: right; }
+
+blockquote footer {
+    font-size: 1rem;
+}
+
+blockquote footer::before {
+    content: "\2014";
+    margin-right: calc(.25rem * var(--base-scale));
+}
+/* End of Blockquotes */
+
+/* Lists */
+ul.unstyled {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.inline {
+    list-style-type: none;
+    padding: 0;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+}
+
+ul.inline > li {
+    margin-right: var(--base-line-height);
+}
+
+ul.inline > li:last-of-type {
+    margin-right: 0;
+}
+
+/* Description lists */
+dl {
+    border-left: 4px solid black;
+    padding: var(--base-line-height);
+    padding-right: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    font-style: italic;
+    margin-bottom:  var(--base-line-height);
+}
+
+dd:last-of-type {
+    margin-bottom: 0;
+}
+/* End of Lists */
 /* End of Typography */
 
 /* Table Styles */
