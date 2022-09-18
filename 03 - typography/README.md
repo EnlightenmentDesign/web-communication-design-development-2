@@ -113,7 +113,7 @@ h4 {
 }
 ```
 
-If you refresh the `index.html` file inside the Typography folder you will see the styles are updated and how it looks with the new styles.
+If you refresh the `index.html` file inside the Typography folder, you will see the styles are updated and how it looks with the new styles.
 
 We have a section called **"Heading styled paragraphs"**, here we are going to add a few more styles to style the paragraphs if we ever want to add a heading looking sentence that does not have the same importance as for example a proper heading element.
 
