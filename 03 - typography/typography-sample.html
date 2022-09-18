@@ -9,7 +9,27 @@
 
         <title>Student Name - Student ID | Typography in use</title>
         <link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="//basehold.it/25">
+		<style>
+			body:after {
+				position: absolute;
+				width: auto;
+				height: auto;
+				z-index: 9999;
+				content: '';
+				display: block;
+				pointer-events: none;
+				top: 2px;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: url("images/25.svg");
+				background-size: 4px 25px;
+			}
+
+			body:active:after {
+				display: none;
+			}
+		</style>
     </head>
     <body>
 

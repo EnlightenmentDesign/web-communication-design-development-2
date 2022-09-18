@@ -143,7 +143,16 @@ h4, .h4 {
 
 ## Other Styles
 ### Inline element styles
+Review `Table 1.3 - Paragraph elements` to see all the elements we have available for inline-styles.
 
+### Paragraphs
+We are going to add a bit of margin at the bottom of each paragraph to create separation from one element and the next.
+```
+/* Paragraph */
+p {
+    margin-bottom: var(--base-line-height);
+}
+```
 
 ### Blockquotes
 One of the elements that we see in multiple ecommerce websites are customer testimonials or quotes about the services provided from their customers. We are going to style a blockquote component that can be used to display testimonials on our personal portfolio or website redesign project.
@@ -193,6 +202,9 @@ blockquote footer::before {
 ```
 
 ### Unordered and Ordered Lists
+Having the right html structure for lists is important to denote parent/child relationship.
+
+Please notice that the nested `ul` are placed inside the corresponding `li`.
 ```
 <ul>
     <li>Unordered list item 1</li>
@@ -214,4 +226,202 @@ blockquote footer::before {
     </li>
     <li>Unordered list item 4</li>
 </ul>
+```
+
+A good exercise to understand how list are styled is to remove the default browser styles from a list style. In our case we are going to do it with the `ul class="unstyled"` element.
+
+```
+ul.unstyled {
+    list-style-type: none;
+    padding-left: 0;
+}
+```
+
+We can also affect how elements inside of a list is laid out. We can use both `flexbox` or even `float` to make that happen. Let's style our `ul class="inline"` to have all the list items inside of it to be aligned in the baseline.
+
+*`float`*
+```
+ul.inline {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.inline > li {
+    display: inline-block;
+    margin-right: calc(1rem * var(--base-scale));
+}
+
+ul.inline > li:last-of-type {
+    margin-right: 0;
+}
+```
+
+*`flexbox`*
+```
+ul.inline {
+    list-style-type: none;
+    padding: 0;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+}
+
+
+ul.inline > li {
+    margin-right: calc(1rem * var(--base-scale));
+}
+
+ul.inline > li:last-of-type {
+    margin-right: 0;
+}
+```
+
+We also have unconventional types of lists such as the `definition list`, `definition term` and `definition description`.
+
+```
+<dl><dt></dt><dd></dd></dl>
+```
+
+The purpose of the above is to create a list of definitions that may be used on the site. Think of common terms.
+
+We can keep the style minimalistic by doing something like this.
+
+```
+dl {
+    border-left: 4px solid black;
+    padding: var(--base-line-height);
+    padding-right: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    font-style: italic;
+    margin-bottom:  var(--base-line-height);
+}
+
+dd:last-of-type {
+    margin-bottom: 0;
+}
+```
+
+## Final Solution
+```
+:root {
+    /* Typography */
+    --base-font-size: 20px;
+    --base-scale: 1.25;
+    --base-line-height: calc(1em * var(--base-scale));
+    --h4-font-size: 1rem;
+    --h3-font-size: calc(1rem * var(--base-scale));
+    --h2-font-size: calc(1rem * var(--base-scale) * var(--base-scale));
+    --h1-font-size: calc(1rem * var(--base-scale) * var(--base-scale) * var(--base-scale));
+}
+
+/* Typography */
+h1, h2, h3 ,h4 ,h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Libre Baskerville', 'Georgia', 'Times New Roman', serif;
+    line-height: var(--base-line-height);
+    font-weight: 700;
+    margin-bottom: var(--base-line-height);
+}
+
+h1, .h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2, .h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3, .h3 {
+    font-size: var(--h3-font-size);
+}
+
+h4, .h4 {
+    font-size: var(--h4-font-size);
+}
+
+/* Paragraph */
+p {
+    margin-bottom: var(--base-line-height);
+}
+
+/* Blockquotes */
+blockquote {
+    font-size: calc(1rem * var(--base-scale));
+}
+
+blockquote p:first-of-type::before {
+    content: open-quote;
+}
+
+blockquote p:last-of-type::after {
+    content: close-quote;
+}
+
+blockquote.text-center { text-align: center; }
+
+blockquote.text-right { text-align: right; }
+
+blockquote footer {
+    font-size: 1rem;
+}
+
+blockquote footer::before {
+    content: "\2014";
+    margin-right: calc(.25rem * var(--base-scale));
+}
+/* End of Blockquotes */
+
+/* Lists */
+ul.unstyled {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.inline {
+    list-style-type: none;
+    padding: 0;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+}
+
+ul.inline > li {
+    margin-right: var(--base-line-height);
+}
+
+ul.inline > li:last-of-type {
+    margin-right: 0;
+}
+
+/* Description lists */
+dl {
+    border-left: 4px solid black;
+    padding: var(--base-line-height);
+    padding-right: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    font-style: italic;
+    margin-bottom:  var(--base-line-height);
+}
+
+dd:last-of-type {
+    margin-bottom: 0;
+}
+/* End of Lists */
+/* End of Typography */
 ```
