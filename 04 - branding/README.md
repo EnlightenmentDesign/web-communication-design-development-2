@@ -113,6 +113,7 @@ Let's add the styles to make our buttons work.
     text-decoration: none;
     color: var(--white);
     border: 0 none;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -235,6 +236,7 @@ Try in your html the following HTML elements:
     text-decoration: none;
     color: var(--white);
     border: 0 none;
+    cursor: pointer;
 }
 
 .btn:hover {
