@@ -280,3 +280,122 @@ Try in your html the following HTML elements:
 
 ### Typography
 I would also encourage you to add some color to your typography. For example, you can make the Heading 1 to use the primary color, Heading 2 can use the secondary color. Don't forget to update also the default color font for the site to use `var(--font-color)` instead of black.
+
+### Forms
+Here is the final solution for form elements
+```
+:root {
+    /* Branding */
+    ...
+    --secondary-hover: hsla(211, 100%, 31%, 100%);
+    ...
+}
+
+/* Forms */
+fieldset {
+    padding: var(--base-line-height);
+    border: 1px solid var(--primary);
+    margin-bottom: var(--base-line-height);
+}
+
+fieldset legend {
+    color: var(--primary);
+}
+
+.form-group {
+    margin-bottom: var(--base-line-height);
+}
+
+fieldset .form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control,
+.form-check-input {
+    accent-color: var(--secondary);
+}
+
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: var(--base-line-height);
+    padding: calc((1em / var(--base-scale)) / var(--base-scale) / var(--base-scale)) calc(1em / var(--base-scale) / var(--base-scale));
+    border: 1px solid var(--gray-0);
+    color: var(--font-color);
+}
+
+input.form-control {
+    width: 100%;
+    max-width: 100%;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: calc(4 * var(--base-line-height));
+}
+
+/* Pseudo Selectors */
+.form-control:focus {
+    outline: var(--secondary-blurred) solid 2px;
+    outline-offset: 2px;
+}
+
+.form-check-input:checked {
+    box-shadow: 0 0 4px 4px var(--secondary-blurred);
+}
+
+.form-control:disabled,
+.form-control:hover:disabled,
+input:disabled,
+input:hover:disabled {
+    background-color: var(--gray-3);
+    color: var(--gray-2);
+    cursor: not-allowed;
+}
+
+input:invalid,
+input:focus:invalid {
+    border-color: red;
+    box-shadow: 0 0 2px red;
+    outline: red solid 2px;
+    outline-offset: 2px;
+}
+```
+
+#### Testing your branding with a sample form
+```
+<div class="container">
+    <form method="post" action="registration.php" name="registration">
+        <fieldset>
+            <legend>Demographics</legend>
+            <div class="form-group row">
+                <label for="firstName" class="col-sm-4 col-form-label">First Name:</label>
+                <div class="col-sm-8">
+                    <input type="text" name="firstName" id="firstName" class="form-control" required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="lastName" class="col-sm-4 col-form-label">Last Name:</label>
+                <div class="col-sm-8">
+                    <input type="text" name="lastName" id="lastName" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-4 col-form-label">Email:</label>
+                <div class="col-sm-8">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="user@domain.com" />
+                </div>
+            </div>
+        </fieldset>
+        <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary" />
+        <input type="reset" name="reset" id="reset" value="Reset" class="btn btn-tertiary" disabled />
+    </form>
+</div>
+```
