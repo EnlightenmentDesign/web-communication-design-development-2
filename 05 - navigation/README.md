@@ -1,4 +1,11 @@
 # Navigation
+All websites have a navigation. The purpose of the navigation is to help the user better find the content they are looking for in our website. There are two different ways to organize a navigation:
+* function
+* topic
+
+The organization of your navigation would be based on the need for the website, end-user, etc.
+
+To create our navigation we are going to start with our basic HTML structure.
 
 ## Markup
 ```
@@ -38,6 +45,16 @@
 </div>
 ```
 
+Please notice a few things on the HTML. We are using our `grid system` to create the wrapper around our navigationitself. We also have the following elements:
+* `<nav>` [read more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)
+* brand for our site
+* `<button>` that allows us to open and close the mobile navigation
+* the navigation itself inside of a `<div>` element and that inside a `<ul>` element
+* a dropdown section as well
+* a screen reader only element `sr-only` [read more](https://a11y-guidelines.orange.com/en/web/components-examples/accessible-hiding/)
+
+You can see the elements represented below on the next section inside our CSS.
+
 ## Initial CSS Declarations
 ```
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
@@ -55,6 +72,10 @@
 .sr-only {}
 /* End of Navigation Styles */
 ```
+
+Please note that we are importing a new CSS library called [Font Awesome](https://fontawesome.com/icons) by using the `@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');`. The purpose of this library is to take away the need to create `png`, `svg` or `jpeg` for icons that are commonly used on websites such as the hamburger menu, or social media icons. I would encourage you to look at [Font Awesome](https://fontawesome.com/icons) to learn more and prepare for the footer design classes.
+
+Because we work from mobile to desktop, we are going to start adding styles to our mobile screensize.
 
 ## Styles for Navigation (Mobile)
 ```
@@ -162,6 +183,8 @@
 /* End of Navigation Styles */
 ```
 
+Then we are going to move to our Desktop styles by using the media breakpoint of `min-width: 768px`.
+
 ## Styles for Navigation (Destkop)
 ```
 @media screen and (min-width: 768px){
@@ -187,6 +210,11 @@
 }
 ```
 
+With this in place we can see that now the mobile menu and the dropdown menu are still remaining open.
+
+The best way to solve this is to add JavaScript that would then allow us to click on a specific button such as the `navbar-toggler` or the `dropdown-toggler` to open their corresponding elements.
+
+Please add the following script to the top of the `app.js` file.
 
 ## JavaScript
 ```
@@ -212,6 +240,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
+During the JavaScripts classes I will be explaining more in-depth what I did to make this navigation work. For right now we can use the the script as it stands.
+
+Please be aware that for the `navbar-toggler` there's a property called `data-target` and that has a value of `#navigation` which makes a reference to the `id` of the navigation itself.
+
+If you were to inspect the navigation HTML you will notice that by clicking on the toggles a class of `collapse` is added or removed automatically.
+
+Let's add some styles to make then the navigation behave as intended.
+
 ## Action styles
 ```
 .navigation.collapse .navbar-nav {
@@ -222,6 +258,23 @@ document.addEventListener('DOMContentLoaded', () => {
     display: none;
 }
 ```
+
+If you try to click on the elements it should be working as intended now. However, we need to make one more update.
+
+Click on the `navbar-toggler` until the mobile navigation is hidden. Then switch to a desktop view or your browser be greater than 768px. You will notice that the navigation is now gone. We need to fix by adding an extra selector in our media query. We are going to modify the `.navbar-nav` selector and add a secondary selector for `.navigation.collapse .navbar-nav`, it will end up looking like this:
+
+## Fix desktop nav
+```
+.navigation.collapse .navbar-nav,
+.navbar-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: baseline;
+    align-content: center;
+}
+```
+
 
 ## Full CSS
 ```
