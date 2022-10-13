@@ -11,6 +11,8 @@ We are also using other styles that we created earlier for example:
 * Form structure and styles in Branding
 * etc.
 
+We are also adding extra class modifiers to our links on the footer to be able to style it in the future.
+
 ### Combined Mobile, Tablet and Desktop views
 ```
 <footer>
@@ -37,7 +39,7 @@ We are also using other styles that we created earlier for example:
                           <input type="email" name="subscribe" id="subscribe" class="form-control" />
                       </div>
                   </div>
-                  <input type="submit" name="submit" id="submit" value="Submit" />
+                  <input class="btn btn-secondary" type="submit" name="submit" id="submit" value="Submit" />
               </form>
           </div>
       </div>
@@ -48,7 +50,7 @@ We are also using other styles that we created earlier for example:
               <p>&copy; 1995 Mockup. All Rights Reserved. Student Name | Student ID</p>
           </div>
           <div class="col-md-4">
-              <ul class="unstyled inline">
+              <ul class="inline">
                   <li><a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
                   <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
                   <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
