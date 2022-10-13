@@ -71,6 +71,12 @@ Because most of our styles are built from what we have previously defined, we ar
 Please notice that we are just overriding what we need to change, rather than re-declaring all our styles.
 
 ```
+::root {
+    ...
+    --gray-4: #efefef;
+    ...
+}
+
 /* Footer Styles */
 footer {
     margin-top: 3rem;
