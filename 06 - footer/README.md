@@ -78,6 +78,11 @@ footer {
     background-color: var(--gray-3);
 }
 
+footer h3,
+footer h4 {
+    margin-bottom: calc(1rem / var(--base-scale));
+}
+
 footer .footer-nav {
     margin: 0;
 }
