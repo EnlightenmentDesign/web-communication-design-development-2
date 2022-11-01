@@ -30,7 +30,9 @@ This represents either `true` or `false`, `1` or `0`, `on` or `off`, and `yes` o
 * console.log(3 > 2) // true
 * console.log(3 < 2) // false
 
-## Logical Operators
+## Comparison Operators
+Given that `x = 5`, the table below explains the comparison operators:
+
 | Operator | Description | Comparing | Returns |
 |----------|:------------|:----------|:-------:|
 |==| equal to | x == 8<br />x == 5<br />x == "5"|false<br />true<br />true|
@@ -41,3 +43,12 @@ This represents either `true` or `false`, `1` or `0`, `on` or `off`, and `yes` o
 |<| less than | x < 8 | true |
 |>=| greater than or equal to | x >= 8 | false |
 |<=| less than or equal to | x <= 8 | true |
+
+## Logical Operators
+Given that `x = 6` and `y = 3`, the table below explains the logical operators.
+
+| Operator | Description | Example |
+|:--------:|:-----------:|:--------|
+| && | and | (x < 10 && y > 1) is true |
+| || | or | (x == 5 || y == 5) is false |
+| ! | not | !(x == y) is true |
