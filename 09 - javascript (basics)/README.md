@@ -30,7 +30,7 @@ This represents either `true` or `false`, `1` or `0`, `on` or `off`, and `yes` o
 * console.log(3 > 2) // true
 * console.log(3 < 2) // false
 
-## Comparison Operators
+### Comparison Operators
 Given that `x = 5`, the table below explains the comparison operators:
 
 | Operator | Description | Comparing | Returns |
@@ -44,7 +44,7 @@ Given that `x = 5`, the table below explains the comparison operators:
 |>=| greater than or equal to | x >= 8 | false |
 |<=| less than or equal to | x <= 8 | true |
 
-## Logical Operators
+### Logical Operators
 Given that `x = 6` and `y = 3`, the table below explains the logical operators.
 
 | Operator | Description | Example |
@@ -52,3 +52,121 @@ Given that `x = 6` and `y = 3`, the table below explains the logical operators.
 | && | and | (x < 10 && y > 1) is true |
 | \|\| | or | (x == 5 || y == 5) is false |
 | ! | not | !(x == y) is true |
+
+### Empty Values (Straight copy from Eloquent JavaScript)
+There are two special values, written `null` and `undefined`, that are used to denote the absence of a meaningful value. They are themselves values, but they carry no information.
+
+Many operations in the language that don’t produce a meaningful value (you’ll see some later) yield undefined simply because they have to yield some value.
+
+The difference in meaning between undefined and null is an accident of JavaScript’s design, and it doesn’t matter most of the time. In cases where you actually have to concern yourself with these values, I recommend treating them as mostly interchangeable.
+
+## Practice
+Let's compare the following examples
+
+### Equal to Operator
+```
+const a = 5, b = 2, c = 'hello';
+
+// equal to operator
+console.log(a == 5);     // true
+console.log(b == '2');   // true
+console.log(c == 'Hello');  // false
+```
+
+### Not Equal to Operator
+```
+const a = 3, b = 'hello';
+
+// not equal operator
+console.log(a != 2); // true
+console.log(b != 'Hello'); // true
+```
+
+### Strict Equal to Operator
+```
+const a = 2;
+
+// strict equal operator
+console.log(a === 2); // true
+console.log(a === '2'); // false
+```
+
+### Strict Not Equal to Operator
+```
+const a = 2, b = 'hello';
+
+// strict not equal operator
+console.log(a !== 2); // false
+console.log(a !== '2'); // true
+console.log(b !== 'Hello'); // true
+```
+
+### Greater than Operator
+```
+const a = 3;
+
+// greater than operator
+console.log(a > 2); // true
+```
+
+### Greater than or Equal to Operator
+```
+const a = 3;
+
+// greater than or equal operator
+console.log(a >= 3); //true
+```
+
+### Less than Operator
+```
+const a = 3, b = 2;
+
+// less than operator
+console.log(a < 2); // false
+console.log(b < 3); // true
+```
+
+### Less than or Equal to Operator
+```
+const a = 2;
+
+// less than or equal operator
+console.log(a <= 3) // true
+console.log(a <= 2); // true
+```
+
+### Logical AND Operator
+```
+const a = true, b = false;
+const c = 4;
+
+// logical AND
+console.log(a && a); // true
+console.log(a && b);  // false
+
+console.log((c > 2) && (c < 2)); // false
+```
+
+### Logical OR Operator
+```
+const a = true, b = false, c = 4;
+
+
+// logical OR
+console.log(a || b); // true
+console.log(b || b); // false
+console.log((c>2) || (c<2)); // true
+```
+
+### Logical NOT Operator
+```
+const a = true, b = false;
+
+// logical NOT
+console.log(!a); // false
+console.log(!b); // true
+```
+
+Other important reads:
+* [Programiz](https://www.programiz.com/javascript/comparison-logical)
+* [W3Schools](https://www.w3schools.com/js/js_comparisons.asp)
