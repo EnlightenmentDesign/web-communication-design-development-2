@@ -34,3 +34,10 @@ This represents either `true` or `false`, `1` or `0`, `on` or `off`, and `yes` o
 | Operator | Description | Comparing | Returns |
 |----------|:------------|:----------|:-------:|
 |==| equal to | x == 8<br />x == 5<br />x == "5"|false<br />true<br />true|
+|===| equal value and equal type | x === 5<br />x === "5"|true<br />false|
+|!=| not equal to | x != 8|true|
+|!==| not equal value and not equal type | x !== 5<br />x !== "5"<br />x !== 8|false<br />true<br />true|
+|>| greater than | x > 8 | false |
+|<| less than | x < 8 | true |
+|>=| greater than or equal to | x >= 8 | false |
+|<=| less than or equal to | x <= 8 | true |
