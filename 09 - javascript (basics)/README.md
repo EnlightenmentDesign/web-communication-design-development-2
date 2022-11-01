@@ -198,9 +198,14 @@ if (condition) {
 
 #### Example
 ```
+let greeting = '';
+const hour = 10;
+
 if (hour < 18) {
   greeting = "Good day";
 }
+
+console.log(greeting);
 ```
 
 ### The else Statement
@@ -215,11 +220,16 @@ if (condition) {
 
 #### Example
 ```
+let greeting = '';
+const hour = 19;
+
 if (hour < 18) {
   greeting = "Good day";
 } else {
   greeting = "Good evening";
 }
+
+console.log(greeting);
 ```
 
 ### The else if Statement
@@ -236,6 +246,9 @@ if (condition1) {
 
 #### Example
 ```
+let greeting = '';
+const hour = 21;
+
 if (time < 10) {
   greeting = "Good morning";
 } else if (time < 20) {
@@ -243,6 +256,8 @@ if (time < 10) {
 } else {
   greeting = "Good evening";
 }
+
+console.log(greeting);
 ```
 
 ### The JavaScript Switch Statement
@@ -267,6 +282,8 @@ This is how it works:
 
 #### Example
 ```
+let day = '';
+
 switch (new Date().getDay()) {
   case 0:
     day = "Sunday";
@@ -275,7 +292,7 @@ switch (new Date().getDay()) {
     day = "Monday";
     break;
   case 2:
-     day = "Tuesday";
+    day = "Tuesday";
     break;
   case 3:
     day = "Wednesday";
@@ -289,6 +306,8 @@ switch (new Date().getDay()) {
   case 6:
     day = "Saturday";
 }
+
+console.log(day);
 ```
 
 #### The break Keyword
@@ -301,6 +320,8 @@ It is not necessary to break the last case in a switch block. The block breaks (
 #### The default Keyword
 The `default` keyword specifies the code to run if there is no case match:
 ```
+let text = '';
+
 switch (new Date().getDay()) {
   case 6:
     text = "Today is Saturday";
@@ -311,6 +332,8 @@ switch (new Date().getDay()) {
   default:
     text = "Looking forward to the Weekend";
 }
+
+console.log(text);
 ```
 
 The `default` keyword does not have to be the last case in a switch block.
@@ -331,7 +354,9 @@ A strict comparison can only be true if the operands are of the same type.
 
 In this example there will be no match for x:
 ```
+let text = '';
 let x = "0";
+
 switch (x) {
   case 0:
     text = "Off";
@@ -342,6 +367,8 @@ switch (x) {
   default:
     text = "No value found";
 }
+
+console.log(text);
 ```
 
 [W3Schools - JavaScript if, else, and else if](https://www.w3schools.com/js/js_if_else.asp)
