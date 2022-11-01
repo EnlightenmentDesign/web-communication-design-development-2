@@ -170,6 +170,11 @@ console.log(!b); // true
 Other important reads:
 * [Programiz - JavaScript Comparison and Logical Operators](https://www.programiz.com/javascript/comparison-logical)
 * [W3Schools - JavaScript Comparison and Logical Operators](https://www.w3schools.com/js/js_comparisons.asp)
+<br />
+<br />
+<hr />
+<br />
+<br />
 
 ## JavaScript if, else, and else if
 Very often when you write code, you want to perform different actions for different decisions.
