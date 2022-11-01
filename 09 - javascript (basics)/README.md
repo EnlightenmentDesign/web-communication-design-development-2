@@ -5,17 +5,17 @@ There are different ways to embed JavaScript in an HTML page.
 
 ### Inline
 ```
-<a id="button" href="#" onclick="alert(‘Hello World’)">Click Me</a>
+<a id="button" href="#" onclick="alert('Hello World')">Click Me</a>
 ```
 What do you think is the downside of using this method?
 
 ### Code block
 ```
 <script>
-	button = document.getElementById(‘Button’);
-	button.addEventListener("click", function(){
-		console.log("Hello World!");
-	});
+    button = document.getElementById('Button');
+    button.addEventListener("click", function(){
+        console.log("Hello World!");
+    });
 </script>
 ```
 What do you think is the downside of using this method?
@@ -87,9 +87,9 @@ Given that `x = 6` and `y = 3`, the table below explains the logical operators.
 ### Empty Values (Straight copy from Eloquent JavaScript)
 There are two special values, written `null` and `undefined`, that are used to denote the absence of a meaningful value. They are themselves values, but they carry no information.
 
-Many operations in the language that don’t produce a meaningful value (you’ll see some later) yield undefined simply because they have to yield some value.
+Many operations in the language that don't produce a meaningful value (you'll see some later) yield undefined simply because they have to yield some value.
 
-The difference in meaning between undefined and null is an accident of JavaScript’s design, and it doesn’t matter most of the time. In cases where you actually have to concern yourself with these values, I recommend treating them as mostly interchangeable.
+The difference in meaning between undefined and null is an accident of JavaScript's design, and it doesn't matter most of the time. In cases where you actually have to concern yourself with these values, I recommend treating them as mostly interchangeable.
 
 ## Practice
 Let's compare the following examples
