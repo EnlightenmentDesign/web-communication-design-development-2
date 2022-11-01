@@ -1,5 +1,36 @@
 # JavaScript Basics
 
+## Embedding JavaScript
+There are different ways to embed JavaScript in an HTML page.
+
+### Inline
+```
+<a id="button" href="#" onclick="alert(‘Hello World’)">Click Me</a>
+```
+What do you think is the downside of using this method?
+
+### Code block
+```
+<script>
+	button = document.getElementById(‘Button’);
+	button.addEventListener("click", function(){
+		console.log("Hello World!");
+	});
+</script>
+```
+What do you think is the downside of using this method?
+
+### External
+```
+<script src="js/scripts.js" type="text/javascript"></script>
+```
+This is preferred, why?
+<br />
+<br />
+<hr />
+<br />
+<br />
+
 ## Highly Recommended
 I would highly recommend reading [Eloquent Javascript](https://eloquentjavascript.net/) if you are interested in learning more about JavaScript. Most of the exercises and information comes directly from this online book.
 
