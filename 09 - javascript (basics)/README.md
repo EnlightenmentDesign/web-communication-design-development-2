@@ -471,11 +471,11 @@ for(let number = 0; ; number += 3){
 #### Updating Bindings
 You may have seen that there are a few symbols that we are using above that I have not gone into detail. Let me clarify them now.
 
-| Symbol | <div style="max-width: 15rem;">Description | Example |
+| Symbol | Description |` Example                                  `|
 |:-------|:------------|:--------|
 | += | This would be the same as `number = number + 2` | number = 0;<br />number = number + 2; // 2<br />number += 2 |
 | ++ | Increment Operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed. | let x = 3;<br />const y = x++;<br /><br />console.log(`x:${x}, y:${y}`);<br />// expected output: "x:4, y:3"<br /><br />let a = 3;<br />const b = ++a;<br /><br />console.log(`a:${a}, b:${b}`);<br />// expected output: "a:4, b:4" | 
-| -- | <div style="width: 15rem;">or after the decrement, depending on where the operator is placed. | let x = 3;<br />const y = x--;<br /><br />console.log(`x:${x}, y:${y}`);<br />// expected output: "x:2, y:3"<br /><br />let a = 3;<br />const b = --a;<br /><br />console.log(`a:${a}, b:${b}`);<br />// expected output: "a:2, b:2" | 
+| -- | Decrement Operator decrements (subtracts one from) its operand and returns the value before or after the decrement, depending on where the operator is placed. | let x = 3;<br />const y = x--;<br /><br />console.log(`x:${x}, y:${y}`);<br />// expected output: "x:2, y:3"<br /><br />let a = 3;<br />const b = --a;<br /><br />console.log(`a:${a}, b:${b}`);<br />// expected output: "a:2, b:2" | 
 
 
 [mdn web docs - Increment (++)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
