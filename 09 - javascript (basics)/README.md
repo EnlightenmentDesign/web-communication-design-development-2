@@ -471,7 +471,7 @@ for(let number = 0; ; number += 3){
 #### Updating Bindings
 You may have seen that there are a few symbols that we are using above that I have not gone into detail. Let me clarify them now.
 
-| Symbol | Description |` Example                                  `|
+| Symbol | Description | Example &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |:-------|:------------|:--------|
 | += | This would be the same as `number = number + 2` | number = 0;<br />number = number + 2; // 2<br />number += 2 |
 | ++ | Increment Operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed. | let x = 3;<br />const y = x++;<br /><br />console.log(`x:${x}, y:${y}`);<br />// expected output: "x:4, y:3"<br /><br />let a = 3;<br />const b = ++a;<br /><br />console.log(`a:${a}, b:${b}`);<br />// expected output: "a:4, b:4" | 
