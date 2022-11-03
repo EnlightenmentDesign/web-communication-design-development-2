@@ -488,13 +488,13 @@ You may have seen that there are a few symbols that we are using above that I ha
 Write a loop that makes seven calls to console.log to output the following triangle (try it with both for and while loops):
 
 
-\#
-\##
-\###
-\####
-\#####
-\######
-#######
+\#<br />
+\##<br />
+\###<br />
+\####<br />
+\#####<br />
+\######<br />
+#######<br />
 
 You would need to read more about: [length](https://www.w3schools.com/jsref/jsref_length_string.asp)
 
