@@ -404,3 +404,79 @@ console.log(text);
 
 [W3Schools - JavaScript if, else, and else if](https://www.w3schools.com/js/js_if_else.asp)
 [W3Schools - The JavaScript Switch Statement](https://www.w3schools.com/js/js_switch.asp)
+<br />
+<br />
+<hr />
+<br />
+<br />
+
+## Loops
+### *while* Loops
+The purpose of the while loop is to allow something to keep repeating while something else is *true*.
+
+For example, we can do a counter that keeps adding 2 as long as the number is less than 100.
+
+```
+let number = 0;
+
+while(number <= 100){
+  console.log(`The Number is ${number}`);
+  number += 2;
+}
+```
+
+#### *do while* Loop
+This is a variant of the *while* loop that runs the *do* or action first and then checks *while*. This would ensure that the loop is executed at least once, even if the condition is false.
+
+```
+let number = 0;
+
+do{
+  console.log(`The Number is ${number}`);
+  number += 2;
+}
+while(number <= 100);
+```
+
+[W3Schools - JavaScript While Loop](https://www.w3schools.com/js/js_loop_while.asp)
+
+### *for* Loops
+*for* loops do the same function as *while* loops. However, it follows this pattern:
+```
+for (expression 1; expression 2; expression 3) {
+  // code block to be executed
+}
+```
+
+For example, if we follow the example above we can do a counter that keeps adding 3 as long as the number is less than 100.
+
+```
+for(let number = 0; number <=100; number += 3){
+  console.log(`The Number is ${number}`);
+}
+```
+
+We could also write it this way:
+```
+for(let number = 0; ; number += 3){
+  if(number > 100){
+    break
+  }
+  console.log(`The Number is ${number}`);
+}
+```
+
+[W3Schools - JavaScript For Loop](https://www.w3schools.com/js/js_loop_for.asp)
+
+#### Updating Bindings
+You may have seen that there are a few symbols that we are using above that I have not gone into detail. Let me clarify them now.
+
+| Symbol | Description | Example |
+|:-------|:------------|:--------|
+| += | This would be the same as `number = number + 2` | number = 0;<br />number = number + 2; // 2<br />number += 2 |
+| ++ | Increment Operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed. | let x = 3;<br />const y = x++;<br /><br />console.log(`x:${x}, y:${y}`);<br />// expected output: "x:4, y:3"<br /><br />let a = 3;<br />const b = ++a;<br /><br />console.log(`a:${a}, b:${b}`);<br />// expected output: "a:4, b:4" | 
+| -- | Decrement Operator decrements (subtracts one from) its operand and returns the value before or after the decrement, depending on where the operator is placed. | let x = 3;<br />const y = x--;<br /><br />console.log(`x:${x}, y:${y}`);<br />// expected output: "x:2, y:3"<br /><br />let a = 3;<br />const b = --a;<br /><br />console.log(`a:${a}, b:${b}`);<br />// expected output: "a:2, b:2" | 
+
+
+[mdn web docs - Increment (++)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+[mdn web docs - Decrement (--)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
