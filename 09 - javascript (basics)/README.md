@@ -506,3 +506,132 @@ When you have that working, modify your program to print "FizzBuzz" for numbers 
 (This is actually an interview question that has been claimed to weed out a significant percentage of programmer candidates. So if you solved it, your labor market value just went up.)
 
 You would need to read more about: [Remainder (%)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+<br />
+<br />
+<hr />
+<br />
+<br />
+
+## Functions
+Functions are the bread and butter of JavaScript programming. The concept of wrapping a piece of program in a value has many uses. It gives us a way to structure larger programs, to reduce repetition, to associate names with subprograms, and to isolate these subprograms from each other.
+
+```
+const square = function(x) {
+  return x * x;
+};
+
+console.log(square(12));
+// → 144
+```
+
+### Mini Exercise
+Let's take what you created for the triangle exercise above and place it inside a function called `createTriangle` and we are going to pass a specific number of lines that we would like the triangle to grow to as one of our parameters.
+
+## Bindings and scopes
+Each binding has a scope, which is the part of the program in which the binding is visible. For bindings defined outside of any function or block, the scope is the whole program—you can refer to such bindings wherever you want. These are called global.
+
+But bindings created for function parameters or declared inside a function can be referenced only in that function, so they are known as local bindings. Every time the function is called, new instances of these bindings are created. This provides some isolation between functions—each function call acts in its own little world (its local environment) and can often be understood without knowing a lot about what’s going on in the global environment.
+
+```
+let x = 10;
+
+if (true) {
+  let y = 20;
+  var z = 30;
+  console.log(x + y + z);
+  // → 60
+}
+
+// y is not visible here
+console.log(x + z);
+// → 40
+```
+
+In the example above you can see the `x` and `z` are global. `x` is defined outside of the function, and `z` is using the global variable definition called `var`. However, because `y` is being defined as `let` or if we would have used `const` then `y` would not be available outside of the function due to scope.
+
+```
+const halve = function(n) {
+  return n / 2;
+};
+
+let n = 10;
+console.log(halve(100));
+// → 50
+
+console.log(n);
+// → 10
+```
+
+### Declaration Notation
+#### Function declaration
+This is a function declaration. The statement defines the binding square and points it at the given function. It is slightly easier to write and doesn’t require a semicolon after the function.
+
+```
+function square(x) {
+  return x * x;
+}
+```
+
+```
+console.log("The future says:", future());
+
+function future() {
+  return "You'll never have flying cars";
+}
+```
+
+#### Arrow Functions
+There’s a third notation for functions, which looks very different from the others. Instead of the function keyword, it uses an arrow (=>) made up of an equal sign and a greater-than character (not to be confused with the greater-than-or-equal operator, which is written >=).
+
+```
+const power = (base, exponent) => {
+  let result = 1;
+  for (let count = 0; count < exponent; count++) {
+    result *= base;
+  }
+  return result;
+};
+```
+
+```
+const square1 = (x) => { return x * x; };
+const square2 = x => x * x;
+```
+
+##### Fun Example
+Try this in your code.
+
+```
+const hello = prompt("Who's your favourite Super Hero?");
+
+const sayHello = hello => {
+  if(hello.length === 0){
+    return "nobody, because you hate fun"
+  } else {
+    return hello;
+  }
+}
+
+console.log("Say hello to:", sayHello(hello));
+```
+
+### Optional Arguments
+JavaScript is extremely broad-minded about the number of arguments you pass to a function. If you pass too many, the extra ones are ignored. If you pass too few, the missing parameters get assigned the value undefined.
+
+The downside of this is that it is possible—likely, even—that you’ll accidentally pass the wrong number of arguments to functions. And no one will tell you about it.
+
+The upside is that this behavior can be used to allow a function to be called with different numbers of arguments. For example, this minus function tries to imitate the - operator by acting on either one or two arguments:
+
+```
+function minus(a, b) {
+  if (b === undefined) return -a;
+  else return a - b;
+}
+
+console.log(minus(10));
+// → -10
+console.log(minus(10, 5));
+// → 5
+```
+
+[Eloquent JavaScript - Functions](https://eloquentjavascript.net/03_functions.html)
