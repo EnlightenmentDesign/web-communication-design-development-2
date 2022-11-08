@@ -156,6 +156,8 @@ Because we work from mobile to desktop, we are going to start adding styles to o
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+    /* This fixes the issue with the menu not being clickable when you expand it on desktop */
+    z-index: 1;
 }
 
 .dropdown-menu > a {
