@@ -635,3 +635,260 @@ console.log(minus(10, 5));
 ```
 
 [Eloquent JavaScript - Functions](https://eloquentjavascript.net/03_functions.html)
+<br />
+<br />
+<hr />
+<br />
+<br />
+
+## Rotating Banner
+### HTML Final Solution
+```
+<main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Carousel - Rotating Banner</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Simple carousel</h2>
+          <div class="carousel slide" id="carouselExample1">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h3>Title 1</h3>
+                <p>Some text goes here.</p>
+              </div>
+              <div class="carousel-item">
+                <h3>Title 2</h3>
+                <p>Some text goes here.</p>
+              </div>
+              <div class="carousel-item">
+                <h3>Title 3</h3>
+                <p>Some text goes here.</p>
+              </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-slide="prev" type="button">
+              <span aria-hidden="true" class="carousel-control-prev-icon"><i class="fa-solid fa-angle-left"></i></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-bs-slide="next" type="button">
+              <span class="sr-only">Next</span>
+              <span aria-hidden="true" class="carousel-control-next-icon"><i class="fa-solid fa-angle-right"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Usage:</h3>
+          <p>Please make sure that you are using different a "id" to separate the different carousels. The "id" must be changed on the carousel and button values.</p>
+          <p>The way I wrote this carousel should allow you to have multiple carousels in the same page.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Simple carousel</h2>
+          <div class="carousel slide" id="carouselExample2">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h3>Title 1</h3>
+                <p>Some text goes here.</p>
+              </div>
+              <div class="carousel-item">
+                <h3>Title 2</h3>
+                <p>Some text goes here.</p>
+              </div>
+              <div class="carousel-item">
+                <h3>Title 3</h3>
+                <p>Some text goes here.</p>
+              </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-slide="prev" type="button">
+              <span aria-hidden="true" class="carousel-control-prev-icon"><i class="fa-solid fa-angle-left"></i></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-bs-slide="next" type="button">
+              <span class="sr-only">Next</span>
+              <span aria-hidden="true" class="carousel-control-next-icon"><i class="fa-solid fa-angle-right"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</main>
+```
+
+### CSS Final Solution
+```
+/* Carousel Styles */
+.carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+    padding: 2rem;
+    background-color: var(--gray-4);
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+button[class^=carousel-control] {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    padding: 0;
+    color: var(--primary);
+    background-color: transparent;
+    border: 0;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+    font-size: 1rem;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+button[class^=carousel-control]:hover {
+    color: var(--primary);
+    outline: 0;
+    opacity: 0.9;
+}
+
+/* There's no need to add this if you already have it on your Navigation CSS */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+/* End of Carousel Styles */
+```
+
+
+#### Concepts to read on:
+* [Using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+
+### JavaScript Final Solution
+```
+const setCarouselEventListeners = (carousel) => {
+    // The code below helps us know if there are more than just one carousel on the page
+    let keys = Object.keys(carousel);
+
+        // run through each of the keys available, this is similar to a for loop
+        keys.forEach((key) => {
+
+            // get the value of the id for the carousel that we are working on
+            const current = carousel[key].getAttribute('id');
+
+            // get all the slides that are available using the .carousel-item class selector
+            const slides = document.getElementById(current).querySelectorAll('.carousel-item');
+            
+            // the reason why we are counting the number of slides and then subtracting 1 is because
+            // JavaScript starts enumerating with zero. If we use the actual lenght, then it will
+            // expect a fourth slide to be present later on
+            const slidesCount = slides.length - 1;
+
+            // select the previous and next button
+            const prev = document.getElementById(current).querySelector('.carousel-control-prev');
+            const next = document.getElementById(current).querySelector('.carousel-control-next');
+            
+            // function to get the current slide that we are in
+            const currentSlide = () => {
+                // go through each one of the slides and find the slide that has a class of
+                // "active". Once that's found then find the position of that slide and return that value
+                return [...slides].map(n => n.classList.contains('active')).findIndex(e => e === true);
+            };
+
+            // handles the actual switch between one slide to the next
+            const switchSlides = (current, nextSlide) => {
+                // removes the class of "active" for the current slide
+                // adds the class of "active" to the next slide
+                [current, nextSlide].forEach(n => slides[n].classList.toggle('active'))
+            }
+            
+            // handles how the slide moves
+            const manageSlides = (direction) => {
+                let current = currentSlide();
+                let setDirection = direction === 'prev' ? -1 : 1;
+                let nextSlide = current + setDirection;
+
+                // check if the slide direction is lower than the first or greater than the last slide
+                // if so, handle it gracefully
+                if(nextSlide < 0 || nextSlide > slidesCount){
+                    nextSlide = nextSlide < 0 ? slidesCount : 0;
+                }
+
+                // actually switch the slides
+                switchSlides(current, nextSlide);
+            }
+
+            // added event listeners for the previous and next buttons
+            prev.addEventListener('click', () => manageSlides('prev'));
+            next.addEventListener('click', () => manageSlides('next'));
+        }
+    )
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    let carousel = document.getElementsByClassName('carousel') || null;
+
+    // check to see if a carousel exists on the page before trying to run this code
+    if(carousel){
+
+        // if the carousel exists then start getting all the elements for the carousel
+        setCarouselEventListeners(carousel);
+    }
+})
+```
+
+#### Concepts to read on:
+* [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+* [Document.getElementById()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
+* [Document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+* [Document.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
+* [Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+* [Array.prototype.forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+* [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+* [Array.prototype.findIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+* [DOMTokenList.toggle()](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle)
+* [EventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
