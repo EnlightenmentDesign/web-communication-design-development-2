@@ -365,6 +365,7 @@ Click on the `navbar-toggler` until the mobile navigation is hidden. Then switch
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+    z-index: 1;
 }
 
 .dropdown-menu > a {
