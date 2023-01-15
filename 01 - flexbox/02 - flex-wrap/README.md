@@ -30,6 +30,6 @@ By default, flex items will all try to fit onto one line. You can change that an
 
 This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-<hr>
+- - -
 
-[flex-flow](https://github.com/EnlightenmentDesign/web-communication-design-development-2/tree/main/01%20-%20flexbox/03%20-%20flex-flow)
+[flex-flow](./../03%20-%20flex-flow/)

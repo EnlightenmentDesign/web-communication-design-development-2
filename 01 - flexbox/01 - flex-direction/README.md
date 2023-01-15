@@ -48,5 +48,6 @@ Before we try these out, don't forget to copy the styles from `display: flex` ex
 
 This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-<hr>
+- - -
+
 [flex-wrap](https://github.com/EnlightenmentDesign/web-communication-design-development-2/tree/main/01%20-%20flexbox/01%20-%20flex-direction)
