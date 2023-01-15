@@ -53,4 +53,4 @@ This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide
 
 <hr>
 
-[Go to flex-direction](https://github.com/EnlightenmentDesign/web-communication-design-development-2/tree/main/01%20-%20flexbox/01%20-%20flex-direction)
+[flex-direction](https://github.com/EnlightenmentDesign/web-communication-design-development-2/tree/main/01%20-%20flexbox/01%20-%20flex-direction)
