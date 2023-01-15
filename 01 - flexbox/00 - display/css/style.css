@@ -15,22 +15,6 @@ body {
     margin: 0;
 }
 
-.parent {
-    border: 1px dashed #cccccc;
-    padding: 1rem;
-}
-
-.child {
-    border: 1px dotted #cccccc;
-    padding: 1rem;
-    aspect-ratio: 16/9;
-    min-width: 10rem;
-    color: #02026b;
-}
-
-.child:nth-child(odd) { background-color: #becffe; }
-.child:nth-child(even) { background-color: #93a9fd; }
-
 /*
     * Window size styles
     * Do not edit or delete this from examples

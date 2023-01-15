@@ -1,5 +1,5 @@
 # Flexbox
-Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex (expand) to fill additional space or shrink to fit into smaller spaces. This article explains all the fundamentals.
+Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex (expand) to fill additional space or shrink to fit into smaller spaces. The following articles explain all the fundamentals.
 
 ## Documentation
 The following documentation is coming from:
