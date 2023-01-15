@@ -50,4 +50,4 @@ This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide
 
 - - -
 
-[flex-wrap](https://github.com/EnlightenmentDesign/web-communication-design-development-2/tree/main/01%20-%20flexbox/01%20-%20flex-direction)
+[flex-wrap](./../02%20-%20flex-wrap/)
