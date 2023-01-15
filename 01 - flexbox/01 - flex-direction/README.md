@@ -1,14 +1,7 @@
 # flex-direction
 This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.
 
-Before we try these out, don't forget to copy the styles from `display: flex` exercise files. We are also going to add a few extra styles for what we currently have in place:
-
-```
-.child {
-    ...
-    max-width: 30vw;
-}
-```
+Before we try these out, don't forget to copy the styles from `display: flex` exercise files.
 
 ## flex-direction: row;
 **row (default):** left to right in ltr; right to left in rtl

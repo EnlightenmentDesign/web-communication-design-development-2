@@ -14,6 +14,7 @@ However, to start testing these properties, we must set up basic styles for our 
     padding: 1rem;
     aspect-ratio: 16/9;
     min-width: 10rem;
+    width: 20rem;
     color: #02026b;
 }
 

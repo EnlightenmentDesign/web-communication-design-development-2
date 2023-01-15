@@ -60,7 +60,7 @@ Now that we are going to test the `flex-flow` with a direction of `column` we ne
 ```
 .parent {
     ...
-    height: 90vh;
+    height: 95vh;
 }
 ```
 
