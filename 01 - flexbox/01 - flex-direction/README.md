@@ -11,6 +11,7 @@ Before we try these out, don't forget to copy the styles from `display: flex` ex
 ```
 
 ## flex-direction: row;
+**row (default):** left to right in ltr; right to left in rtl
 ```
 .parent {
     flex-direction: row;
@@ -19,6 +20,7 @@ Before we try these out, don't forget to copy the styles from `display: flex` ex
 ![flex-direction: row;](./screenshots/00%20-%20flex-direction_row.png)
 
 ## flex-direction: row-reverse;
+**row-reverse:** right to left in ltr; left to right in rtl
 ```
 .parent {
     flex-direction: row-reverse;
@@ -27,6 +29,7 @@ Before we try these out, don't forget to copy the styles from `display: flex` ex
 ![flex-direction: row-reverse;](./screenshots/01%20-%20flex-direction_row-reverse.png)
 
 ## flex-direction: column;
+**column:** same as row but top to bottom
 ```
 .parent {
     flex-direction: column;
@@ -35,18 +38,13 @@ Before we try these out, don't forget to copy the styles from `display: flex` ex
 ![flex-direction: column;](./screenshots/02%20-%20flex-direction_column.png)
 
 ## flex-direction: column-reverse;
+**column-reverse:** same as row-reverse but bottom to top
 ```
 .parent {
     flex-direction: column-reverse;
 }
 ```
 ![flex-direction: column-reverse;](./screenshots/04%20-%20flex-direction_column-reverse.png)
-
-
-* row (default): left to right in ltr; right to left in rtl
-* row-reverse: right to left in ltr; left to right in rtl
-* column: same as row but top to bottom
-* column-reverse: same as row-reverse but bottom to top
 
 This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
