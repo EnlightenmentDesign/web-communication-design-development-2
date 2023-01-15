@@ -8,7 +8,7 @@ This aligns a flex container’s lines within when there is extra space in the c
 **flex-start / start:** items packed to the start of the container. The (more supported) flex-start honors the flex-direction while start honors the writing-mode direction.
 ```
 .parent {
-align-content: flex-start;
+    align-content: flex-start;
 }
 ```
 ![align-content: ](./screenshots/00%20-%20align-content_flex-start_row.png)
