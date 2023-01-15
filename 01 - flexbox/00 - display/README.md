@@ -50,3 +50,7 @@ After setting up these element styles, we can start testing our display property
 ![display: inline-flex; with multiple elements](./screenshots/03%20-%20display_inline-flex.png)
 
 This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+<hr>
+
+[Go to flex-direction](https://github.com/EnlightenmentDesign/web-communication-design-development-2/tree/main/01%20-%20flexbox/01%20-%20flex-direction)
