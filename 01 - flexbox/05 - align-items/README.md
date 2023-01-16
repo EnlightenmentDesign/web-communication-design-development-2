@@ -10,45 +10,45 @@ To test these better we are going to add a new style. This will make the first c
 ### align-items: stretch;
 **stretch (default):** stretch to fill the container (still respect min-width/max-width)
 ```
-    .parent {
-        align-items: stretch;
-    }
+.parent {
+    align-items: stretch;
+}
 ```
 ![align-items: stretch;](./screenshots/03%20-%20align-items_stretch_row.png)
 
 ### align-items: flex-start;
 **flex-start / start / self-start:** items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules.
 ```
-    .parent {
-        align-items: flex-start;
-    }
+.parent {
+    align-items: flex-start;
+}
 ```
 ![align-items: flex-start;](./screenshots/00%20-%20align-items_flex-start_row.png)
 
 ### align-items: flex-end;
 **flex-end / end / self-end:** items are placed at the end of the cross axis. The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules.
 ```
-    .parent {
-        align-items: flex-end;
-    }
+.parent {
+    align-items: flex-end;
+}
 ```
 ![align-items: flex-end;](./screenshots/01%20-%20align-items_flex-end_row.png)
 
 ### align-items: center;
 **center:** items are centered in the cross-axis
 ```
-    .parent {
-        align-items: center;
-    }
+.parent {
+    align-items: center;
+}
 ```
 ![align-items: center;](./screenshots/02%20-%20align-items_center_row.png)
 
 ### align-items: baseline;
 **baseline:** items are aligned such as their baselines align
 ```
-    .parent {
-        align-items: baseline;
-    }
+.parent {
+    align-items: baseline;
+}
 ```
 ![align-items: baseline;](./screenshots/04%20-%20align-items_baseline_row.png)
 

@@ -5,33 +5,27 @@ This defines the alignment along the main axis. It helps distribute extra free s
 ### justify-content: flex-start;
 **flex-start (default):** items are packed toward the start of the flex-direction.
 ```
-    .parent {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-    }
+.parent {
+    justify-content: flex-start;
+}
 ```
 ![justify-content: flex-start;](./screenshots/00%20-%20justify-content_flex-start_row.png)
 
 ### justify-content: flex-end;
 **flex-end:** items are packed toward the end of the flex-direction.
 ```
-    .parent {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-    }
+.parent {
+    justify-content: flex-end;
+}
 ```
 ![justify-content: flex-end;](./screenshots/01%20-%20justify-content_flex-end_row.png)
 
 ### justify-content: center;
 **center:** items are centered along the line
 ```
-    .parent {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-    }
+.parent {
+    justify-content: center;
+}
 ```
 ![justify-content: center;](./screenshots/02%20-%20justify-content_center_row.png)
 
@@ -40,11 +34,9 @@ This defines the alignment along the main axis. It helps distribute extra free s
 
 ***Notice:*** *that the space only applies between elements.*
 ```
-    .parent {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-    }
+.parent {
+    justify-content: space-between;
+}
 ```
 ![justify-content: space-between;](./screenshots/03%20-%20justify-content_space-between_row.png)
 
@@ -56,11 +48,9 @@ This defines the alignment along the main axis. It helps distribute extra free s
 *In other words if we had an available space of 600px and three elments, we would use: <strong>(600px) / (2 * 3) = 100px</strong>.<br >
 This means that each side would have an available space of 100px per side. If you look at the example you will notice that the space between elements is greater than the space from an element to its closest margin.*
 ```
-    .parent {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-    }
+.parent {
+    justify-content: space-around;
+}
 ```
 ![justify-content: space-around;](./screenshots/04%20-%20justify-content_space-around_row.png)
 
@@ -72,11 +62,9 @@ This means that each side would have an available space of 100px per side. If yo
 This means that the space available between all elements and the space of an element to its closest margin is going to be the same.*
 
 ```
-    .parent {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-    }
+.parent {
+    justify-content: space-evenly;
+}
 ```
 ![justify-content: space-evenly;](./screenshots/05%20-%20justify-content_space-evenly_row.png)
 
