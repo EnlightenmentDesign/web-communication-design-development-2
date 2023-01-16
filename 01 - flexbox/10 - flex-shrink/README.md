@@ -15,4 +15,4 @@ This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide
 
 - - -
 
-[flex-basis](./../flex-basis)
+[flex-basis](./../11%20-%20flex-basis/)
