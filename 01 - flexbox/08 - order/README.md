@@ -9,4 +9,10 @@ Items with the same order revert to source order.
 }
 ```
 
+- - -
+
 This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+- - -
+
+[flex-grow](./../09%20-%20flex-grow/)

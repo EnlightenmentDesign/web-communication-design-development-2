@@ -6,7 +6,7 @@ The behavior could be thought of as a minimum gutter, as if the gutter is bigger
 It is not exclusively for flexbox, gap works in grid and multi-column layout as well.
 
 ## flex-flow: row wrap;<br >justify-items: flex-start;<br >align-content: flex-start;
-### gap: <unit>
+### gap: &lt;unit&gt;
 When a single unit of measurement is passed then the gap would apply to both rows and columns.
 ```
 .parent {
@@ -14,7 +14,7 @@ When a single unit of measurement is passed then the gap would apply to both row
 }
 ```
 
-### gap: <unit> <unit>
+### gap: &lt;unit&gt; &lt;unit&gt;
 When two units of measurement is passed then the first value would apply to the `row-gap` and the second to the `column-gap`.
 ```
 .parent {
@@ -22,14 +22,14 @@ When two units of measurement is passed then the first value would apply to the 
 }
 ```
 
-### row-gap: <unit>
+### row-gap: &lt;unit&gt;
 We can also specify which dimension would the gap affect such as `row-gap`
 ```
 .parent {
     row-gap: 1rem;
 }
 ```
-### column-gap: <unit>
+### column-gap: &lt;unit&gt;
 We can also specify which dimension would the gap affect such as `column-gap`
 ```
 .parent {
