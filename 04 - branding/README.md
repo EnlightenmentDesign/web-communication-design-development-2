@@ -287,7 +287,7 @@ Here is the final solution for form elements
 :root {
     /* Branding */
     ...
-    --secondary-hover: hsla(211, 100%, 31%, 100%);
+    --secondary-blurred: hsla(211, 100%, 31%, 100%);
     ...
 }
 
