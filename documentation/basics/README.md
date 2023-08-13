@@ -5,7 +5,7 @@ Throughout this document we are going to create and go over the basics of what i
 * [Folder system](#folder-system)
 * [Index page](#index-page)
 * [CSS](#css)
-* [JavaScript](#css)
+* [JavaScript](#javascript)
 
 <p><br /><br /></p>
 
@@ -175,7 +175,7 @@ CSS is among the core languages of the open web and is standardized across Web b
 ### Table of content
 * [Document comments](#document-comments)
 * [Document standardization](#document-standardization)
-* [Extra CSS for our window sizer](#document-standardization)
+* [Extra CSS for our window sizer](#extract-css-for-our-window-resizer)
 * [Complete CSS](#complete-css)
 * [CSS recommended reading](#css-recommended-reading)
 
