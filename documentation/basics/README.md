@@ -175,7 +175,7 @@ CSS is among the core languages of the open web and is standardized across Web b
 ### Table of content
 * [Document comments](#document-comments)
 * [Document standardization](#document-standardization)
-* [Extra CSS for our window sizer](#extra-css-for-our-window-resizer)
+* [Extra CSS for our window sizer](#extra-css-for-our-window-sizer)
 * [Complete CSS](#complete-css)
 * [CSS recommended reading](#css-recommended-reading)
 
