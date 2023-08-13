@@ -1,2 +1,4 @@
-# web-communication-design-development-2
- Class materials for CTEC 3350
+# Web Communication Design and Development 2
+This modules are broken down in the following sections:
+
+* [Documentation](./documentation)

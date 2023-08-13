@@ -1,8 +1,8 @@
 /*
-    Created by: Student Name - Student ID
-    Created on: Today's Date
-    Updated on: Today's Date
-    Project: Flexbox
+    Created by: Leon Rankin 1001995825
+    Created on: 2/7/2023
+    Updated on: 2/7/2023
+    Project: challenge 1
 */
 
 * {
@@ -15,31 +15,6 @@ body {
     margin: 0;
 }
 
-/* In class practice */
-/* If there are any spaces I'm using 1.618rem as the spacing between elements */
-.story-holder {
-}
-
-.story-holder .story {
-}
-
-.story-holder .story:nth-child(even) {
-}
-
-.story-holder .story .image {
-}
-
-.story-holder .story .description {
-}
-
-@media screen and (min-width: 576px){ }
-
-@media screen and (min-width: 768px){ /* No Styles here */ }
-
-@media screen and (min-width: 992px){ }
-
-@media screen and (min-width: 1200px){ /* No Styles here */ }
-/* End of in class practice */
 
 /*
     Challenge 1
@@ -77,17 +52,23 @@ aside ul {
 @media screen and (min-width: 576px){
     .quick-layout {
         border: 1px dashed #02026b;
+        display: flex;
+        column-gap: 30px;
     }
 
     main {
         border: 1px dashed #1117d7;
         min-height: 100vh;
+        flex: 1 0 auto;
     }
 
     aside {
+        align-content: flex-start;
     }
 
-    aside ul {
+
+    aside ul { 
+        flex-flow: column;
     }
 }
 /* End of Challenge 1 */
@@ -106,6 +87,8 @@ aside ul {
 */
 
 .full-width-two-column {
+    margin-bottom: 1.618rem;
+    border: 1px dashed #6c82fb;
 }
 
 .full-width-two-column .image {
@@ -113,18 +96,25 @@ aside ul {
     width: 100%;
     background-color: #dadada;
     border: 1px dashed #6c82fb;
+    margin-bottom: 1.618rem;
 }
 
 @media screen and (min-width: 768px){
     .full-width-two-column {
         height: 100vh;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
     }
 
     .full-width-two-column.reversed {
+        flex-direction: row-reverse;
     }
 
     .full-width-two-column .image,
     .full-width-two-column .content-holder {
+        flex: 0 0 50%;
+        
     }
 
     .full-width-two-column .image {
@@ -133,10 +123,16 @@ aside ul {
 
     .full-width-two-column .content-holder {
         padding: 1.618rem;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+       
     }
 
     .full-width-two-column .content-holder .content {
         max-width: 20rem;
+       
     }
 }
 /* End of Challenge 2 */
