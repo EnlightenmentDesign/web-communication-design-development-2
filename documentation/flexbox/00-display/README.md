@@ -60,6 +60,20 @@ This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
+
+
+
+https://codepen.io/ccucalon/pen/KKrOgvR
+
+
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="flexbox-display" src="https://codepen.io/ccucalon/embed/KKrOgvR/7fd835393c5184af664707e28e0aa2ff?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/ccucalon/pen/KKrOgvR/7fd835393c5184af664707e28e0aa2ff">
+  flexbox-display</a> by Carlos A Cucalon (<a href="https://codepen.io/ccucalon">@ccucalon</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+
 - - -
 
 [flex-direction](./../01%20-%20flex-direction/)
