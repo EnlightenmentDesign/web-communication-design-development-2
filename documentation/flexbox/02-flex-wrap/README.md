@@ -61,7 +61,7 @@ If you'd like to learn (highly suggested) more about `calc()` please read the do
 <p><br /><br /></p>
 
 ## Try it out for yourself
-I created this <a href="https://codepen.io/ccucalon/pen/bGQXBbj" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.
+I created this <a href="https://codepen.io/ccucalon/pen/bGQXBbj/3515b1ecb7625ba56d0a98f93bafcd9a" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.
 
 <p><br /><br /></p>
 

@@ -63,7 +63,7 @@ Think of flex items as primarily laying out either in horizontal rows or vertica
 <p><br /><br /></p>
 
 ## Try it out for yourself
-I created this <a href="https://codepen.io/ccucalon/pen/xxQvENw" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.
+I created this <a href="https://codepen.io/ccucalon/pen/LYXwbpb/59a7b87d0be385919a74e168eff43967" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.
 
 <p><br /><br /></p>
 
