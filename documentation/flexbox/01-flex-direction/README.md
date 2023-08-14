@@ -6,17 +6,11 @@ Flexbox is (aside from optional wrapping) a single-direction layout concept.
 Think of flex items as primarily laying out either in horizontal rows or vertical columns.
 
 ## Table of content
-* [Before you begin](#before-you-begin)
 * [flex-direction: row](#flex-direction-row)
 * [flex-direction: row-reverse](#flex-direction-row-reverse)
 * [flex-direction: column](#flex-direction-column)
 * [flex-direction: column-reverse](#flex-direction-column-reverse)
 * [Try it out for yourself](#try-it-out-for-yourself)
-
-<p><br /><br /></p>
-
-## Before you begin
-Before we try these out, don't forget to copy the styles from `display: flex` exercise files.
 
 <p><br /><br /></p>
 
