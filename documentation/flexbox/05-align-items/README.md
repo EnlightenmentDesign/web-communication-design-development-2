@@ -1,7 +1,7 @@
 # align-items
-This defines the default behavior for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).
+This defines the default behavior for how flex items are laid out along the secondary axis on the current line. Think of it as the justify-content version for the secondary axis (perpendicular to the main axis).
 
-To test these better we are going to add a new style. This will make the first child elmeent to have a larger font size which we will use when we test `align-items: baseline;`
+To test these better we are going to add a new style. This will make the first child element to have a larger font size which we will use when we test `align-items: baseline;`
 ```
 .child:nth-child(1) { font-size: 1.618rem; }
 ```
