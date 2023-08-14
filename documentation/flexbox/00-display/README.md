@@ -68,9 +68,7 @@ This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide
 <p><br /><br /></p>
 
 ## Try it out for yourself
-I created this CodePen file so that you can try it out in the browser if necessary.
-
-https://codepen.io/ccucalon/pen/KKrOgvR/7fd835393c5184af664707e28e0aa2ff
+I created this <a href="https://codepen.io/ccucalon/pen/KKrOgvR/7fd835393c5184af664707e28e0aa2ff" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.
 
 <p><br /><br /></p>
 
