@@ -74,4 +74,4 @@ I created this <a href="https://codepen.io/ccucalon/pen/KKrOgvR/7fd835393c5184af
 
 - - -
 
-[flex-direction](./../01%20-%20flex-direction/)
+[flex-direction](./../01-flex-direction/)
