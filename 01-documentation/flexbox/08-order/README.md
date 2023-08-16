@@ -52,7 +52,7 @@ The new order of the elements will be `.child.three`, `.child.two`, `.child.four
 <p><br /><br /></p>
 
 ### Try it out for yourself
-I created this <a href="https://codepen.io/ccucalon/pen/qBLWZyr/eb9dee71ceea5ac7d230b59a6d81d483" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.
+I created this <a href="https://codepen.io/ccucalon/pen/MWZgyqW/d1d5858261606d542bd9e394fcc3bd43" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.
 
 <p><br /><br /></p>
 
