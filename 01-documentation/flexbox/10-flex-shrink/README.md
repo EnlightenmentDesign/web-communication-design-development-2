@@ -18,7 +18,7 @@ This works best when it is in combination with other declarations such as `flex-
 <p><br /><br /></p>
 
 ### Try it out for yourself
-I created this <a href="https://codepen.io/ccucalon/pen/QWzLNzR/a246eecb70df5772b480dbd9830e962b" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.
+I created this <a href="https://codepen.io/ccucalon/pen/GRPKZeB/8cbd547bab58fcef387c0ab2d9739bc6" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.
 
 <p><br /><br /></p>
 
