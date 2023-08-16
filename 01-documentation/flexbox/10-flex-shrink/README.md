@@ -4,15 +4,22 @@ This defines the ability for a flex item to shrink if necessary. Negative number
 This works best when it is in combination with other declarations such as `flex-grow` and `flex-basis`
 
 ```
+.child {
+    ...
+    flex-basis: 100%; /* I know we haven't covered this yet */
+    ...
+}
+
 .child.two {
     flex-shrink: 3; /* default 1 */
 }
 ```
 
-- - - 
+<p><br /><br /></p>
 
-This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+### Try it out for yourself
+I created this <a href="https://codepen.io/ccucalon/pen/QWzLNzR/a246eecb70df5772b480dbd9830e962b" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.
 
-- - -
+<p><br /><br /></p>
 
-[flex-basis](./../11%20-%20flex-basis/)
+[flex-basis](./../11-flex-basis/)

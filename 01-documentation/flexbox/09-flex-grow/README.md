@@ -9,6 +9,7 @@ To be able to work on these better, we are going to add a few more css selectors
 .child.four { }
 ```
 
+## Note
 Also to be sure that our exercises work correctly we must comment out the `width` of the `.child` element.
 
 <p><br /><br /></p>
