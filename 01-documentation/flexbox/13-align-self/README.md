@@ -1,12 +1,7 @@
 # align-self
 This allows the default alignment (or the one specified by align-items) to be overridden for individual flex items. Note that float, clear and vertical-align have no effect on a flex item.
 
-Please see the [align-items](https://github.com/EnlightenmentDesign/web-communication-design-development-2/tree/main/01%20-%20flexbox/05%20-%20align-items) explanation to understand the available values.
-
-Before starting this exercise please make sure that you have the following in your CSS:
-```
-.child.one { font-size: 1.618rem; }
-```
+Please see the [align-items](./../05-align-items/) explanation to understand the available values.
 
 ## align-self
 ```
@@ -15,7 +10,26 @@ Before starting this exercise please make sure that you have the following in yo
 }
 ```
 
-## Row
+<p><br /><br /></p>
+
+## Table of content
+* [flex-flow: row wrap;](#flex-flow-row-wrap)
+    * [align-self: flex-start;](#align-self-flex-start)
+    * [align-self: flex-end;](#align-self-flex-end)
+    * [align-self: center;](#align-self-center)
+    * [align-self: baseline;](#align-self-baseline)
+    * [align-self: stretch;](#align-self-stretch)
+* [flex-flow: column wrap;](#flex-flow-column-wrap)
+    * [align-self: flex-start;](#align-self-flex-start-1)
+    * [align-self: flex-end;](#align-self-flex-end-1)
+    * [align-self: center;](#align-self-center-1)
+    * [align-self: stretch;](#align-self-stretch-1)
+* [Try it out for yourself](#try-it-out-for-yourself)
+
+
+<p><br /><br /></p>
+
+## flex-flow: row wrap;
 ### align-self: flex-start;
 ```
 .parent {
@@ -32,6 +46,8 @@ Before starting this exercise please make sure that you have the following in yo
 }
 ```
 ![align-self: flex-start;](./screenshots/00%20-%20align-self_flex-start_row.png)
+
+<p><br /><br /></p>
 
 
 ### align-self: flex-end;
@@ -51,6 +67,8 @@ Before starting this exercise please make sure that you have the following in yo
 ```
 ![align-self: flex-end;](./screenshots/01%20-%20align-self_flex-end_row.png)
 
+<p><br /><br /></p>
+
 
 ### align-self: center;
 ```
@@ -68,6 +86,8 @@ Before starting this exercise please make sure that you have the following in yo
 }
 ```
 ![align-self: center;](./screenshots/02%20-%20align-self_center_row.png)
+
+<p><br /><br /></p>
 
 
 ### align-self: baseline;
@@ -92,6 +112,8 @@ Before starting this exercise please make sure that you have the following in yo
 ```
 ![align-self: baseline;](./screenshots/03%20-%20align-self_baseline_row.png)
 
+<p><br /><br /></p>
+
 
 ### align-self: stretch;
 ```
@@ -110,8 +132,10 @@ Before starting this exercise please make sure that you have the following in yo
 ```
 ![align-self: stretch;](./screenshots/04%20-%20align-self_stretch_row.png)
 
+<p><br /><br /></p>
 
-## Column
+
+## flex-flow: column wrap;
 ### align-self: flex-start;
 ```
 .parent {
@@ -128,6 +152,8 @@ Before starting this exercise please make sure that you have the following in yo
 }
 ```
 ![align-self: flex-start;](./screenshots/05%20-%20align-self_flex-start_column.png)
+
+<p><br /><br /></p>
 
 
 ### align-self: flex-end;
@@ -147,6 +173,8 @@ Before starting this exercise please make sure that you have the following in yo
 ```
 ![align-self: flex-end;](./screenshots/06%20-%20align-self_flex-end_column.png)
 
+<p><br /><br /></p>
+
 
 ### align-self: center;
 ```
@@ -164,6 +192,8 @@ Before starting this exercise please make sure that you have the following in yo
 }
 ```
 ![align-self: center;](./screenshots/07%20-%20align-self_center_column.png)
+
+<p><br /><br /></p>
 
 
 ### align-self: stretch;
@@ -183,10 +213,7 @@ Before starting this exercise please make sure that you have the following in yo
 ```
 ![align-self: stretch;](./screenshots/08%20-%20align-self_stretch_column.png)
 
-- - -
+<p><br /><br /></p>
 
-This section came from: [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-
-- - -
-
-[Assignment](./../14%20-%20Assignment/)
+### Try it out for yourself
+I created this <a href="https://codepen.io/ccucalon/pen/QWzwNQr/cd49e1d062b77dcaa031c4504563b210" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.Z

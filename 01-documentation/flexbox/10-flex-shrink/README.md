@@ -1,5 +1,5 @@
 # flex-shrink
-This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid. If the size of all flex items is larger than the flex container, items shrink to fit according to `flex-shrink`.
+This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid. If the size of all flex items is larger than the flex container, items shrink to fit according to `flex-shrink`. In order for `flex-shrink` to work correctly, the `flex-wrap` must be setup as `nowrap`; else, the content will actually wrap to the next column or row instead of shrinking.
 
 This works best when it is in combination with other declarations such as `flex-grow` and `flex-basis`
 
