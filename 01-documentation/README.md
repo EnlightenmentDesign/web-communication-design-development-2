@@ -4,7 +4,7 @@
 ### [HTML Basics](./basics)
 HTML page creation and folder structure. The output of this section covers the design of our basic template.
 
-### [Readings](.readings)
+### [Review](./review)
 This page contains links to resources that may help refresh your memory on the content covered in CTEC-2350.
 
 ### [Template](./template)
