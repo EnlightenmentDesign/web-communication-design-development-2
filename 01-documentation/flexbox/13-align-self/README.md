@@ -216,4 +216,4 @@ Please see the [align-items](./../05-align-items/) explanation to understand the
 <p><br /><br /></p>
 
 ### Try it out for yourself
-I created this <a href="https://codepen.io/ccucalon/pen/QWzwNQr/cd49e1d062b77dcaa031c4504563b210" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.Z
+I created this <a href="https://codepen.io/ccucalon/pen/OJrPNZx/99d8a0da1a5809fc5c70c4d822e80f00" target="_blank">CodePen</a> file so that you can try it out in the browser if necessary.Z
