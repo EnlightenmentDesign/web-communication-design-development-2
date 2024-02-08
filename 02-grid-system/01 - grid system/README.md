@@ -33,7 +33,7 @@ This will look something like this:
 :root {
     /* Grid */
     --number-of-columns: 6;
-    --grid-width: calc(100% / --number-of-columns);
+    --grid-width: calc(100% / var(--number-of-columns));
     ...
 }
 ```
@@ -54,7 +54,7 @@ With this knowledge we can now create our own column widths.
 :root {
     /* Grid */
     --number-of-columns: 6;
-    --grid-width: calc(100% / --number-of-columns);
+    --grid-width: calc(100% / var(--number-of-columns));
     --col-1: calc(var(--grid-width) * 1);
     --col-2: calc(var(--grid-width) * 2);
     --col-3: calc(var(--grid-width) * 3);
@@ -577,7 +577,7 @@ If you copy the following styles which we created during our In Class Flexbox Pr
 :root {
     /* Grid */
     --number-of-columns: 6;
-    --grid-width: calc(100% / --number-of-columns);
+    --grid-width: calc(100% / var(--number-of-columns));
     --col-1: calc(var(--grid-width) * 1);
     --col-2: calc(var(--grid-width) * 2);
     --col-3: calc(var(--grid-width) * 3);
